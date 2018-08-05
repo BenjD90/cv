@@ -71,7 +71,7 @@ h6 {
  * LINK STYLE
  *------------------------------------------*/
 a {
-    color: #337ab7;
+    color: #608fbf;
     text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -90,7 +90,7 @@ a:active {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #214a73;
+    color: #425883;
 }
 
 p {
@@ -122,7 +122,7 @@ p {
 
 /*btn-primary*/
 .btn-primary {
-    background-color: #91A9C1;
+    background-color: #608fbf;
 }
 
 .btn-primary:hover,
@@ -252,7 +252,7 @@ button:focus,
 
 .section-title h2 {
     margin-bottom: 5px;
-    color: #bebece;
+    color: #608fbf;
 }
 
 /*-----------------------------
@@ -299,7 +299,7 @@ button:focus,
     .header {
         padding: 0;
         text-align: center;
-        border-bottom: 1px solid #ededed;
+        border-bottom: 1px solid #eee;
     }
 
     .header img {
@@ -337,17 +337,17 @@ button:focus,
 .social-icon li a {
     display: block;
     font-size: 12px;
-    color: #333333;
-    width: 34px;
-    height: 34px;
-    line-height: 33px;
+    color: #333;
+    width: 44px;
+    height: 44px;
+    line-height: 52px;
     text-align: center;
-    border-radius: 2px;
-    border: 2px solid #eeeeee;
+    border-radius: 8px;
+    border: 2px solid #eee;
 }
 
 .social-icon li a:hover {
-    border-color: #cccccc;
+    border-color: #ccc;
 }
 
 /*-------------------
@@ -388,7 +388,7 @@ button:focus,
 }
 
 .progress-item .progress-bar {
-    background-color: #91A9C1;
+    background-color: #608fbf;
     box-shadow: none;
     text-align: right;
 }
