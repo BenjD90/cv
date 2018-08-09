@@ -375,14 +375,26 @@ button:focus,
 }
 
 .progress-item .progress-title {
+    width: 100%;
+    text-align: right;
     font-size: 15px;
     font-weight: 400;
     display: inline-block;
     margin-bottom: 5px;
 }
 
+.progress-item .progress-title img {
+    float: left;
+    height: 27px;
+}
+
+.progress-item .progress-title img:not(:first-child) {
+    margin-left: 5px;
+}
+
 .progress-item .progress {
     height: 4px;
+    background-color: #ccc;
     box-shadow: none;
     border-radius: 5px;
 }
@@ -391,24 +403,6 @@ button:focus,
     background-color: #608fbf;
     box-shadow: none;
     text-align: right;
-}
-
-.progress-item .progress-percent {
-    font-size: 10px;
-    background-color: #313131;
-    position: absolute;
-    top: 5px;
-    padding: 0 8px;
-    border-radius: 3px;
-}
-
-.progress-item .progress-percent::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    border-top: 6px solid #313131;
-    border-right: 8px solid transparent;
 }
 
 /*-------------------
