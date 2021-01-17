@@ -394,13 +394,13 @@ button:focus,
 
 .progress-item .progress {
     height: 4px;
-    background-color: #ccc;
+    background-color: #ccc !important;
     box-shadow: none;
     border-radius: 5px;
 }
 
 .progress-item .progress-bar {
-    background-color: #608fbf;
+    background-color: #9bb1c7 !important;
     box-shadow: none;
     text-align: right;
 }
@@ -543,4 +543,12 @@ button:focus,
     margin: 0;
     text-align: center;
     top: 65%;
+}
+
+/* -------- PRINT ----------- */
+
+@media print {
+    .social-icon li a {
+        display: initial;
+    }
 }

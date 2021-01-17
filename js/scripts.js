@@ -15,7 +15,7 @@ jQuery(function ($) {
     // --------------------------------------------------------------------
     // Sticky Sidebar
     // --------------------------------------------------------------------
-
-    $('.left-col-block, .right-col-block').theiaStickySidebar();
-
+    if (window.matchMedia("screen").matches) {
+        $('.left-col-block, .right-col-block').theiaStickySidebar();
+    }
 }); // JQuery end
