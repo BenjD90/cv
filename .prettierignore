@@ -1,0 +1,15 @@
+# not supported files
+.prettierignore
+.env
+.gitignore
+sitemap.xml
+robot.txt
+
+# Editor's config directories
+.vscode
+.idea
+*.iml
+
+# generated files
+yarn.lock
+package.json

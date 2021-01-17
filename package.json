@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "format": "prettier --write '{,@(src|test)/**/}*.*'"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
