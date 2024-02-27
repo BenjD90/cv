@@ -33,8 +33,21 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.skills h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
 .skills .progress-wrapper {
   margin-left: 15px;
+}
+
+.skills .progress-title {
+    margin-top: 20px;
+}
+
+.skills .progress-title p {
+    margin-bottom: 0;
 }
 
 .skills .progress-item {
@@ -72,3 +85,4 @@
   box-shadow: none;
   text-align: right;
 }
+
