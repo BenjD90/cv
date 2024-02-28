@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: Baccalauréat
-description: ""
+description: ''
 sidebar_custom_props:
   dates: 2008
 ---

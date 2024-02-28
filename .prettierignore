@@ -3,7 +3,13 @@
 .env
 .gitignore
 sitemap.xml
-robot.txt
+robots.txt
+.nojekyll
+*.jpg
+*.jpeg
+*.png
+*.ico
+*.svg
 
 # Editor's config directories
 .vscode
