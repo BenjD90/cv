@@ -54,6 +54,10 @@ const config = {
 					priority: 0.5,
 					filename: 'sitemap.xml',
 				},
+				gtag: {
+					trackingID: 'GTM-TV5HCVD3',
+					anonymizeIP: false,
+				},
 			}),
 		],
 	],
