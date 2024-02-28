@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: Lead Développeur JEE
 ---
 
 # Projet de refonte ISM - Lead Développeur JEE

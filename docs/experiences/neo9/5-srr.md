@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+sidebar_label: SFR Réunion - Développeur FullStack JS & Java
 ---
 
 # SRR (SFR Réunion & Mayotte) - Développeur FullStack JS & Java

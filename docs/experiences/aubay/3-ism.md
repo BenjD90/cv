@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+sidebar_label: Développeur Junior Java & JEE
 ---
 
 # TMA FIS - Développeur Junior Java & JEE

@@ -62,12 +62,12 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			// Replace with your project's social card
-			image: 'img/docusaurus-social-card.jpg',
+			image: 'img/social-card.jpg',
 			navbar: {
 				title: 'Benjamin DANIEL',
 				logo: {
 					alt: 'Me',
-					src: 'img/img-profile.jpg',
+					src: 'img/portrait-flipped-32.webp',
 				},
 				items: [
 					{

@@ -11,6 +11,7 @@ function HomepageHeader() {
 	return (
 		<header className={clsx('hero hero--primary', styles.heroBanner)}>
 			<div className="container">
+				<img src={"/cv/img/portrait-400.webp"} />
 				<Heading as="h1" className="hero__title">
 					Benjamin DANIEL
 				</Heading>

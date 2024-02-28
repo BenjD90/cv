@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: Développeur Junior JEE
 ---
 
 # TMA Projet Shop With Me - Développeur Junior JEE
