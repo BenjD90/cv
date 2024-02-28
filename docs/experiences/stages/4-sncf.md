@@ -4,7 +4,8 @@ sidebar_position: 4
 
 # S.N.C.F. - Stage ouvrier
 
-> juin 2019 · 1 mois\
+> juin 2019 · 1 mois
+> \
 > Technicentre Le Landy, Saint-Denis, Île-de-France · Sur site
 
 - Maintenance de pantographes et d’archets, sur TGV et Eurostar

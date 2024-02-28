@@ -4,7 +4,8 @@ sidebar_position: 3
 
 # Déploiement - Lead développeur
 
-> janvier 2019 - juin 2021 · 2 an 6 mois\
+> janvier 2019 - juin 2021 · 2 an 6 mois
+> \
 > Bordeaux · Full remote
 
 Fiabilisation de l'outil, démarré en mars 2018, pour les clients utilisant le Catalogue Neo9 et deux nouveaux prospects préparant une mise en production.

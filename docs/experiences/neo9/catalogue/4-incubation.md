@@ -4,7 +4,8 @@ sidebar_position: 4
 
 # Incubation - Lead Développeur & Scrum Master
 
-> mars 2018 - janvier 2019 · 11 mois\
+> mars 2018 - janvier 2019 · 11 mois
+> \
 > Bordeaux · Hybride
 
 Développement from scratch d'un produit avec une base solide tout en pouvant être utilisé en production en moins d'un an

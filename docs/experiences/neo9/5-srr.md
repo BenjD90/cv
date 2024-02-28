@@ -1,11 +1,14 @@
 ---
 sidebar_position: 7
 sidebar_label: SFR Réunion - Développeur FullStack JS & Java
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/neo9/sfr.png
 ---
 
 # SRR (SFR Réunion & Mayotte) - Développeur FullStack JS & Java
 
-> mars 2016 - octobre 2016 · 7 mois\
+> mars 2016 - octobre 2016 · 7 mois
+> \
 > Paris · Sur site
 
 - Création de la PDC Fibre & ADSL

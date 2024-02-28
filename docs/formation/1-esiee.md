@@ -9,7 +9,8 @@ sidebar_custom_props:
 
 # E.S.I.E.E. Paris
 
-> 2008 - 2013\
+> 2008 - 2013
+> \
 > Noisy-le-Grand, Île-de-France
 
 École d’ingénieur, filière Informatique, spécialité Génie Logiciel.

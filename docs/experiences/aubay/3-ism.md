@@ -5,7 +5,8 @@ sidebar_label: Développeur Junior Java & JEE
 
 # TMA FIS - Développeur Junior Java & JEE
 
-> janvier 2014 - septembre 2014 · 9 mois\
+> janvier 2014 - septembre 2014 · 9 mois
+> \
 > Boulogne-Billancourt, Île-de-France · Sur site
 
 - Maintenance d’applications de gestion financière JAVA (ISM) et JEE (BALI, FACT) : chiffrage, évolutions, corrections d’anomalies, tests

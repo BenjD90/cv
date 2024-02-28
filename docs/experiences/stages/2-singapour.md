@@ -4,7 +4,8 @@ sidebar_position: 2
 
 # Nanyang Polytechnic - Stage à l'étranger
 
-> mai 2012 - juillet 2012 · 3 mois\
+> mai 2012 - juillet 2012 · 3 mois
+> \
 > Singapour · Sur site
 
 - Développement d’un écran interactif d’affichage de publicités

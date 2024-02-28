@@ -1,10 +1,13 @@
 ---
 sidebar_position: 5
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/neo9/bdl.webp
 ---
 
 # Rempart Vie - Développeur FullStack JS
 
-> février 2017 - mai 2017 · 3 mois\
+> février 2017 - mai 2017 · 3 mois
+> \
 > Paris · Sur site
 
 Création d'un parcours de souscription d'une assurance-vie pour BDL Capital Management

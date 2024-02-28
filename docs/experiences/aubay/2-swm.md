@@ -5,7 +5,8 @@ sidebar_label: Développeur Junior JEE
 
 # TMA Projet Shop With Me - Développeur Junior JEE
 
-> septembre 2014 - janvier 2015 · 1 an 2 mois\
+> septembre 2014 - janvier 2015 · 1 an 2 mois
+> \
 > Saint-Mandé, Île-de-France · Sur site
 
 - Corrections d'anomalies, développements, chiffrages, tests sur deux applications SDI et AGI

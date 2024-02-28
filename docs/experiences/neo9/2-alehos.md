@@ -1,10 +1,14 @@
 ---
 sidebar_position: 4
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/neo9/air-liquide.png
+  newTitle: Lead Developpeur Full Stack JS/TypeScript
 ---
 
 # Air Liquide - Lead Developpeur Full Stack JS/TypeScript
 
-> mai 2017 - mars 2018 · 11 mois\
+> mai 2017 - mars 2018 · 11 mois
+> \
 > Paris · Sur site
 
 Co-lead technique de l'équipe. Création d'un extranet pour des prescripteurs de soin d'aide à la respiration afin d'aider le suivi de leur patientèle pour les filiales santé d'Air Liquide

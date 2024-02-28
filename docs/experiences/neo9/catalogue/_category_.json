@@ -4,5 +4,9 @@
   "link": {
     "type": "generated-index",
     "description": "Catalogue"
+  },
+  "customProps": {
+    "image": "/cv/img/pages/experiences/neo9/catalogue-neo9.png",
+    "dates": "2018 - 2023 · 5 ans"
   }
 }

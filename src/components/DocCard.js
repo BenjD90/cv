@@ -5,7 +5,6 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import { findFirstSidebarItemLink, useDocById } from '@docusaurus/theme-common/internal';
 import { usePluralForm } from '@docusaurus/theme-common';
-import isInternalUrl from '@docusaurus/isInternalUrl';
 import { translate } from '@docusaurus/Translate';
 
 import Heading from '@theme/Heading';
@@ -41,11 +40,11 @@ function CardLayout({ href, icon, title, description, image, dates }) {
 		<CardContainer href={href}>
 			{image && (
 				<div>
-					<img height={'60px'} src={image} />
+					<img height={'60px'} src={image} alt={title} />
 				</div>
 			)}
 			{title && (
-				<Heading as="h2" className={clsx('text--truncate', styles.cardTitle)} title={title}>
+				<Heading as="h2" className={clsx(styles.cardTitle)} title={title}>
 					{icon} {title}
 				</Heading>
 			)}
@@ -71,7 +70,9 @@ function CardCategory({ item }) {
 	if (!href) {
 		return null;
 	}
-	const title = item.customProps?.hideTitle ? '' : item.label;
+	let title = item.customProps?.hideTitle ? '' : item.label;
+	if (item.customProps?.newTitle) title = item.customProps.newTitle;
+
 	return (
 		<CardLayout
 			href={href}
@@ -79,13 +80,16 @@ function CardCategory({ item }) {
 			image={item.customProps?.image}
 			title={title}
 			description={item.description ?? categoryItemsPlural(item.items.length)}
+			dates={item.customProps?.dates}
 		/>
 	);
 }
 
 function CardLink({ item }) {
 	const doc = useDocById(item.docId ?? undefined);
-	const title = item.customProps?.hideTitle ? '' : item.label;
+	let title = item.customProps?.hideTitle ? '' : item.label;
+	if (item.customProps?.newTitle) title = item.customProps.newTitle;
+
 	return (
 		<CardLayout
 			href={item.href}

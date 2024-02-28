@@ -4,7 +4,8 @@ sidebar_position: 2
 
 # Maintenance Évolutive - Tech lead développeur
 
-> juin. 2021 - juin 2022 · 1 an\
+> juin 2021 - juin 2022 · 1 an
+> \
 > Bordeaux · Full remote
 
 Suite du projet Catalogue :

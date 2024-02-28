@@ -5,7 +5,8 @@ sidebar_label: Lead Développeur JEE
 
 # Projet de refonte ISM - Lead Développeur JEE
 
-> janvier 2015 - mars 2016 · 1 an 2 mois\
+> janvier 2015 - mars 2016 · 1 an 2 mois
+> \
 > Saint-Mandé, Île-de-France · Sur site
 
 - Développement complet d'une application de gestion d'un moteur de traitements PL/SQL

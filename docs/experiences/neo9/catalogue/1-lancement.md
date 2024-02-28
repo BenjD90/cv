@@ -4,7 +4,8 @@ sidebar_position: 1
 
 # Lancement du produit - Architecte Technique
 
-> juin. 2022 - novembre 2023 · 1 an 6 mois\
+> juin 2022 - novembre 2023 · 1 an 6 mois
+> \
 > Bordeaux · Hybride
 
 Dans le cadre d'un nouveau projet intégrant le produit, l'équipe a été doublée.
@@ -20,7 +21,7 @@ Dans le cadre d'un nouveau projet intégrant le produit, l'équipe a été doubl
 
 7 développeurs\
 1 product owner\
-1 scrum master
+1 Scrum master
 
 ## Compétences
 
@@ -51,3 +52,12 @@ Dans le cadre d'un nouveau projet intégrant le produit, l'équipe a été doubl
 - Mirakl
 - PlantUML
 - Méthodes agiles
+
+## Images du projet
+
+![img](/img/pages/experiences/neo9/catalogue/portfolio/home.png)
+![img](/img/pages/experiences/neo9/catalogue/portfolio/jobs.png)
+![img](/img/pages/experiences/neo9/catalogue/portfolio/jobs-timeline-live.gif)
+
+
+

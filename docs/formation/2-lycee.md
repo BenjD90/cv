@@ -8,7 +8,8 @@ sidebar_custom_props:
 
 # Lycée Sainte Geneviève d'Asnières
 
-> 2008\
+> 2008
+> \
 > Asnières-sur-Seine, Île-de-France
 
 Baccalauréat Section Scientifique (S), spécialité Physique, option Musique

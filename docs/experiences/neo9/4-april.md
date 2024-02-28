@@ -1,10 +1,14 @@
 ---
 sidebar_position: 6
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/neo9/april.png
+  newTitle: Développeur FullStack JS & Scala
 ---
 
 # April - Développeur FullStack JS & Scala
 
-> octobre 2016 - février 2017 · 4 mois\
+> octobre 2016 - février 2017 · 4 mois
+> \
 > Paris/Lyon · Sur site
 
 - Création du tarificateur April Accident
