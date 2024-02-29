@@ -40,7 +40,7 @@ function CardLayout({ href, icon, title, description, image, dates }) {
 		<CardContainer href={href}>
 			{image && (
 				<div>
-					<img height={'60px'} src={image} alt={title} />
+					<img loading="lazy" height={'60px'} src={image} alt={title} />
 				</div>
 			)}
 			{title && (

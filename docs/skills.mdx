@@ -2,173 +2,135 @@
 sidebar_position: 2
 ---
 
+import SkillProgress from '@site/src/components/skills';
+
 # Compétences
 
-<div class="skills">
+<div className="skills">
 
 ## Frontend
 
-{' '}
-
-<div class="progress-wrapper">
-	<div class="progress-item">
-		<span class="progress-title">
-			<img loading="lazy" src="/cv/img/skills/logos/small/angular.png" alt="Angular" />
-			Angular
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '90%' }}></div>
-		</div>
-	</div>
-	<div class="progress-item">
-		<span class="progress-title">
-			<img loading="lazy" src="/cv/img/skills/logos/small/html5.png" alt="HTML5" />
-			<img loading="lazy" src="/cv/img/skills/logos/small/css3.png" alt="CSS3" />
-			HTML 5/CSS 3 (Bootstrap 3 & 4)
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '80%' }}></div>
-		</div>
-	</div>
-</div>
+    <SkillProgress skillGroups={[
+    	{
+    		skills: [{
+    			img: 'angular',
+    		}],
+    		completed: 70
+    	},
+    	{
+    		skills: [{
+    			img: 'html5',
+    			name: 'HTML5'
+    		}, {
+    			img: 'css3',
+    			name: 'CSS3'
+    		}],
+    		name: 'HTML 5/CSS 3 (Bootstrap 3 & 4)',
+    		completed: 80
+    	},
+    ]} />
 
 ## Backend
 
-<div class="progress-wrapper">
-	<div class="progress-item">
-		<span class="progress-title">
-			<img loading="lazy" src="/cv/img/skills/logos/small/ts.png" alt="TypeScript" />
-			Typescript
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '95%' }}></div>
-		</div>
-	</div>
-	<div class="progress-item">
-		<span class="progress-title">
-			<img loading="lazy" src="/cv/img/skills/logos/small/nodejs.png" alt="Node.js" />
-			Node.js
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '85%' }}></div>
-		</div>
-	</div>
-	<div class="progress-item">
-		<span class="progress-title">
-			<img loading="lazy" src="/cv/img/skills/logos/small/mongodb.png" alt="MongoDB" />
-			MongoDB
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '80%' }}></div>
-		</div>
-	</div>
-	<div class="progress-item">
-		<span class="progress-title">
-			<img loading="lazy" src="/cv/img/skills/logos/small/elasticsearch.png" alt="Elasticsearch" />
-			ElasticSearch
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '50%' }}></div>
-		</div>
-	</div>
-	<div class="progress-item">
-		<span class="progress-title">
-			<img loading="lazy" src="/cv/img/skills/logos/small/java.png" alt="JAVA" />
-			<img loading="lazy" src="/cv/img/skills/logos/small/java-ee.png" alt="JEE" />
-			<img loading="lazy" src="/cv/img/skills/logos/small/spring.png" alt="Spring" />
-			Java/JEEE (SpringMVC, Spring JDBC)
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '30%' }}></div>
-		</div>
-	</div>
-	<div class="progress-item">
-		<span class="progress-title">
-			<img loading="lazy" src="/cv/img/skills/logos/small/MySQL.png" alt="MySQL" />
-			<img
-				loading="lazy"
-				src="/cv/img/skills/logos/small/oracle-database.png"
-				alt="Oracle Database"
-			/>
-			SQL (MySQL, Oracle 11g&12c)
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '70%' }}></div>
-		</div>
-	</div>
-	<div class="progress-item">
-		<span class="progress-title" style={{ 'text-align': 'left' }}>
-			C#, PHP, C, Python (notions), Assembleur MC68000, OpenCV, Maven
-		</span>
-		<div class="progress">
-			<div class="progress-bar" style={{ width: '20%' }}></div>
-		</div>
-	</div>
-</div>
+    <SkillProgress skillGroups={[
+    	{
+    		skills: [{
+    			img: 'ts',
+    			name: 'TypeScript'
+    		}],
+    		completed: 95
+    	},
+    	{
+    		skills: [{
+    			img: 'nodejs',
+    			name: 'Node.js'
+    		}],
+    		completed: 87
+    	},
+    	{
+    		skills: [{
+    			img: 'mongodb',
+    			name: 'MongoDB'
+    		}],
+    		completed: 85
+    	},
+    	{
+    		skills: [{
+    			img: 'elasticsearch',
+    			name: 'ElasticSearch'
+    		}],
+    		completed: 50
+    	},
+    	{
+    		skills: [{
+    			img: 'java',
+    		}, {
+    			img: 'java-ee',
+    			name: 'JEE'
+    		}, {
+    			img: 'spring',
+    		}],
+    		name: 'Java/JEEE (SpringMVC, Spring JDBC)',
+    		completed: 30
+    	},
+    	{
+    		skills: [{
+    			img: 'MySQL',
+    		}, {
+    			img: 'oracle-database',
+    			name: 'Oracle Database'
+    		}],
+    		name: 'SQL (MySQL, Oracle 11g&12c)',
+    		completed: 70
+    	},
+    	{
+    		name:'C#, PHP, C, Python (notions), Assembleur MC68000, OpenCV, Maven',
+    		completed: 20
+    	},
+    ]} />
 
 ## Outils
 
-  <div class="progress-wrapper">
-    <div class="progress-item">
-      <span class="progress-title">
-        <img loading="lazy" src="/cv/img/skills/logos/small/git.png" alt="Git" />
-        Git
-      </span>
-      <div class="progress">
-        <div
-          class="progress-bar"
-          style={{ width: "70%" }}
-        ></div>
-      </div>
-    </div>
-    <div class="progress-item">
-      <span class="progress-title">
-        <img loading="lazy" src="/cv/img/skills/logos/small/bash.png" alt="Bash" />
-        Bash
-      </span>
-      <div class="progress">
-        <div
-          class="progress-bar"
-          style={{ width: "60%" }}
-        ></div>
-      </div>
-    </div>
-    <div class="progress-item">
-      <span class="progress-title">
-        <img loading="lazy" src="/cv/img/skills/logos/small/docker.png" alt="Docker" />
-        Docker & Docker compose
-      </span>
-      <div class="progress">
-        <div
-          class="progress-bar"
-          style={{ width: "60%" }}
-        ></div>
-      </div>
-    </div>
-    <div class="progress-item">
-      <span class="progress-title">
-        <img loading="lazy" src="/cv/img/skills/logos/small/npm.png" alt="NPM" />
-        <img loading="lazy" src="/cv/img/skills/logos/small/yarn.png" alt="Yarn" />
-        NPM, Yarn
-      </span>
-      <div class="progress">
-        <div
-          class="progress-bar"
-          style={{ width: "85%" }}
-        ></div>
-      </div>
-    </div>
-    <div class="progress-item">
-      <span class="progress-title">
-        <img loading="lazy" src="/cv/img/skills/logos/small/intellij.png" alt="IntelliJ" />
-        IntelliJ IDEA
-      </span>
-      <div class="progress">
-        <div
-          class="progress-bar"
-          style={{ width: "70%" }}
-        ></div>
-      </div>
-    </div>
-  </div>
+	<SkillProgress skillGroups={[
+		{
+			skills: [{
+				img: 'git',
+			}],
+			completed: 70
+		},
+		{
+			skills: [{
+				img: 'bash',
+			}],
+			completed: 60
+		},
+		{
+			skills: [{
+				img: 'docker',
+			}],
+			name: 'Docker & Docker Compose',
+			completed: 60
+		},
+		{
+			skills: [{
+				img: 'npm',
+				name: 'NPM'
+			}, {
+				img: 'yarn',
+			}],
+			name: 'NPM, Yarn',
+			completed: 85
+		},
+		{
+			skills: [{
+				img: 'intellij',
+			}, {
+				img: 'vscode',
+				name: 'Visual Studio Code'
+			}],
+			name: 'IntelliJ IDEA',
+			completed: 70
+		},
+	]} />
+
 </div>
