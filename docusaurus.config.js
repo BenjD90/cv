@@ -33,7 +33,6 @@ const config = {
 		defaultLocale: 'fr',
 		locales: ['fr'],
 	},
-
 	presets: [
 		[
 			'classic',
@@ -61,7 +60,6 @@ const config = {
 			}),
 		],
 	],
-
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({

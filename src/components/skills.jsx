@@ -21,7 +21,8 @@ function SkillGroup({ skillGroup }) {
 	return (
 		<div className="progress-item">
 			<span className="progress-title">
-				{skillGroup.skills && skillGroup.skills.map((skill) => <SkillImage skill={skill} />)}
+				{skillGroup.skills &&
+					skillGroup.skills.map((skill, index) => <SkillImage key={index} skill={skill} />)}
 				{name}
 			</span>
 			<div className="progress">
@@ -34,8 +35,8 @@ function SkillGroup({ skillGroup }) {
 export default function SkillProgress({ skillGroups }) {
 	return (
 		<div className="progress-wrapper">
-			{skillGroups.map((skillGroup) => (
-				<SkillGroup skillGroup={skillGroup} />
+			{skillGroups.map((skillGroup, index) => (
+				<SkillGroup key={index} skillGroup={skillGroup} />
 			))}
 		</div>
 	);

@@ -85,3 +85,36 @@
 	box-shadow: none;
 	text-align: right;
 }
+
+/** ******** VIS TIMELINE ********* **/
+.vis-labelset .vis-label, .vis-time-axis .vis-text {
+    color: var(--ifm-color-content) !important;
+}
+
+.vis-timeline .vis-item {
+    cursor: pointer;
+    color: var(--ifm-color-content-inverse);
+    border-color: var(--ifm-color-primary);
+    background-color: var(--ifm-color-primary-lighter);
+}
+
+.vis-timeline .vis-item.projects {
+    background-color: var(--ifm-color-primary-dark);
+}
+
+.vis-timeline .vis-item.techno {
+    background-color: var(--ifm-background-color-secondary);
+}
+
+.vis-timeline .vis-item:hover {
+    background-color: var(--ifm-background-color);
+    color: var(--ifm-color-primary)
+}
+
+.vis-timeline .vis-item-content {
+    line-height: 27px;
+}
+
+.vis-timeline .vis-item-content>* {
+    vertical-align: middle;
+}
