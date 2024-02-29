@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcv=self.webpackChunkcv||[]).push([[677],{816:e=>{e.exports=JSON.parse('{"title":"Exp\xe9riences Professionnelles","slug":"experiences","permalink":"/cv/docs/experiences","navigation":{"previous":{"title":"Comp\xe9tences","permalink":"/cv/docs/skills"},"next":{"title":"Neo9","permalink":"/cv/docs/experiences/neo9"}}}')}}]);

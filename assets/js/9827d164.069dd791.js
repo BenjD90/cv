@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcv=self.webpackChunkcv||[]).push([[174],{3064:e=>{e.exports=JSON.parse('{"title":"Formation","slug":"formation","permalink":"/cv/docs/formation","navigation":{"previous":{"title":"S.N.C.F. - Stage ouvrier","permalink":"/cv/docs/experiences/stages/sncf"},"next":{"title":"E.S.I.E.E. Paris","permalink":"/cv/docs/formation/esiee"}}}')}}]);
