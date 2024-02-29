@@ -256,7 +256,7 @@ export default function Home() {
 		},
 		{
 			id: 'technos',
-			content: 'Compétences',
+			content: 'Technologies',
 		},
 	];
 
