@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 sidebar_label: Exemples d'usage
-description: ""
+description: ''
 ---
 
 # Exemples de projets accompagnés utilisant le Catalogue Neo9

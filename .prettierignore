@@ -5,11 +5,16 @@
 sitemap.xml
 robots.txt
 .nojekyll
+
+# Images
 *.jpg
 *.jpeg
 *.png
 *.ico
 *.svg
+*.psd
+*.webp
+*.gif
 
 # Editor's config directories
 .vscode

@@ -1,6 +1,11 @@
 {
   "label": "Neo9",
   "position": 1,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "experiences/neo9"
+  },
   "customProps": {
     "image": "/cv/img/pages/experiences/neo9.svg",
     "hideTitle": true

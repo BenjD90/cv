@@ -17,7 +17,7 @@ function useCategoryItemsPlural() {
 			count,
 			translate(
 				{
-					message: '{count} items',
+					message: '{count} parties',
 					id: 'theme.docs.DocCard.categoryDescription.plurals',
 					description:
 						'The default description for a category card in the generated index about how many items this category includes',

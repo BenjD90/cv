@@ -16,5 +16,5 @@ Je suis à la recherche de nouveaux challenges. Je cherche à sortir du monde du
 Je suis particulièrement intéressé par le secteur ferroviaire ou des énergies renouvelables où je pourrai utiliser mes compétences
 pour avoir un impact réel sur l'industrie. Je suis motivé par l'idée de travailler sur des projets qui contribuent à un avenir plus durable.
 
-[Mon expérience chez Neo9](/cv/docs/experiences/neo9/) m'a permis d'apprécier les avantages d'une petite structure à taille humaine. C'est là où j'ai pu
-montrer le plus ma valeur ajoutée [comme sur le projet Catalogue](/cv/docs/category/projet-catalogue).
+[Mon expérience chez Neo9](/cv/docs/experiences/neo9) m'a permis d'apprécier les avantages d'une petite structure à taille humaine. C'est là où j'ai pu
+montrer le plus ma valeur ajoutée [comme sur le projet Catalogue](/cv/docs/experiences/neo9/catalogue).

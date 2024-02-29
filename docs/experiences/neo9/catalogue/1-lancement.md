@@ -58,6 +58,3 @@ Dans le cadre d'un nouveau projet intégrant le produit, l'équipe a été doubl
 ![img](/img/pages/experiences/neo9/catalogue/portfolio/home.png)
 ![img](/img/pages/experiences/neo9/catalogue/portfolio/jobs.png)
 ![img](/img/pages/experiences/neo9/catalogue/portfolio/jobs-timeline-live.gif)
-
-
-
