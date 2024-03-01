@@ -13,7 +13,7 @@ function HomepageHeader() {
 	return (
 		<header className={clsx('hero hero--primary', styles.heroBanner)}>
 			<div className="container">
-				<img src={'/cv/img/portrait-400.webp'} />
+				<img src={'/cv/img/portrait-400.webp'} alt="Photo de profil" />
 				<Heading as="h1" className="hero__title">
 					Benjamin DANIEL
 				</Heading>
@@ -56,7 +56,8 @@ export default function Home() {
 		{
 			start: '2008-09-01',
 			end: '2014-01-01',
-			content: '<img src="/cv/img/pages/formation/esiee.png" height="27px" /> E.S.I.E.E. Paris',
+			content:
+				'<img src="/cv/img/pages/formation/esiee.png" alt="esiee" height="27px" /> E.S.I.E.E. Paris',
 			selectable: false,
 			group: 'entreprises',
 			link: '/cv/docs/formation/esiee',
@@ -64,7 +65,7 @@ export default function Home() {
 		{
 			start: '2014-01-01',
 			end: '2016-03-13',
-			content: '<img src="/cv/img/pages/experiences/aubay.svg" height="27px" /> Aubay',
+			content: '<img src="/cv/img/pages/experiences/aubay.svg" alt="Aubay" height="27px" /> Aubay',
 			selectable: false,
 			group: 'entreprises',
 			link: '/cv/docs/experiences/aubay',
@@ -72,7 +73,7 @@ export default function Home() {
 		{
 			start: '2016-03-14',
 			end: new Date(),
-			content: '<img src="/cv/img/pages/experiences/neo9.svg" height="27px" /> Neo9',
+			content: '<img src="/cv/img/pages/experiences/neo9.svg" alt="Neo9" height="27px" /> Neo9',
 			selectable: false,
 			group: 'entreprises',
 			link: '/cv/docs/experiences/neo9',
@@ -142,6 +143,14 @@ export default function Home() {
 			link: '/cv/docs/experiences/neo9/catalogue',
 		},
 		{
+			start: '2018-03-01',
+			end: new Date(),
+			content: 'Contribution Open Source',
+			group: 'projects',
+			className: 'projects',
+			link: '/cv/docs/experiences/neo9/oss',
+		},
+		{
 			start: '2023-11-20',
 			end: new Date(),
 			content: 'Peaksys',
@@ -152,35 +161,35 @@ export default function Home() {
 		{
 			start: '2017-02-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/ts.png" />',
+			content: '<img src="/cv/img/skills/logos/small/ts.png" alt="ts" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2016-01-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/angular.png" />',
+			content: '<img src="/cv/img/skills/logos/small/angular.png" alt="angular" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-02-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/nodejs.png" />',
+			content: '<img src="/cv/img/skills/logos/small/nodejs.png" alt="nodejs" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2016-03-14',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/mongodb.png" />',
+			content: '<img src="/cv/img/skills/logos/small/mongodb.png" alt="mongodb" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-10-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/elasticsearch.png" />',
+			content: '<img src="/cv/img/skills/logos/small/elasticsearch.png" alt="elasticsearch" />',
 			className: 'techno',
 			group: 'technos',
 		},
@@ -188,7 +197,7 @@ export default function Home() {
 			start: '2009-01-01',
 			end: '2017-02-01',
 			content: `
-					<img src="/cv/img/skills/logos/small/java.png" />
+					<img src="/cv/img/skills/logos/small/java.png" alt="java" />
 			`,
 			className: 'techno',
 			group: 'technos',
@@ -197,7 +206,7 @@ export default function Home() {
 			start: '2013-01-01',
 			end: '2017-02-01',
 			content: `
-					<img src="/cv/img/skills/logos/small/java-ee.png" />
+					<img src="/cv/img/skills/logos/small/java-ee.png" alt="ee" />
 			`,
 			className: 'techno',
 			group: 'technos',
@@ -206,7 +215,7 @@ export default function Home() {
 			start: '2014-09-01',
 			end: '2017-02-01',
 			content: `
-					<img src="/cv/img/skills/logos/small/spring.png" />
+					<img src="/cv/img/skills/logos/small/spring.png" alt="spring" />
 			`,
 			className: 'techno',
 			group: 'technos',
@@ -214,28 +223,28 @@ export default function Home() {
 		{
 			start: '2016-03-14',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/git.png" />',
+			content: '<img src="/cv/img/skills/logos/small/git.png" alt="git" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2018-03-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/docker.png" />',
+			content: '<img src="/cv/img/skills/logos/small/docker.png" alt="docker" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-05-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/yarn.png" />',
+			content: '<img src="/cv/img/skills/logos/small/yarn.png" alt="yarn" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2007-12-01',
 			end: new Date(),
-			content: `<img src="/cv/img/skills/logos/small/html5.png" /><img src="/cv/img/skills/logos/small/css3.png" />`,
+			content: `<img src="/cv/img/skills/logos/small/html5.png" alt="html5" /><img src="/cv/img/skills/logos/small/css3.png" alt="css3" />`,
 			className: 'techno',
 			group: 'technos',
 		},

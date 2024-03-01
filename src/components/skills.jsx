@@ -1,4 +1,5 @@
 import React from 'react';
+import Skill from './skill';
 
 function capitalizeFirstLetter(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
@@ -23,7 +24,7 @@ function SkillGroup({ skillGroup }) {
 			<span className="progress-title">
 				{skillGroup.skills &&
 					skillGroup.skills.map((skill, index) => <SkillImage key={index} skill={skill} />)}
-				{name}
+				<Skill name={name} />
 			</span>
 			<div className="progress">
 				<div className="progress-bar" style={{ width: skillGroup.completed + '%' }}></div>

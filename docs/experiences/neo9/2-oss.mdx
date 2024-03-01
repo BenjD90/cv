@@ -1,0 +1,86 @@
+---
+sidebar_position: 2
+sidebar_label: Contribution Open Source
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/neo9/github.png
+  newTitle: Contribution Open Source
+---
+import Skill from '@site/src/components/skill';
+
+
+# Lead Développeur des bibliothèques open sources Neo9
+
+> depuis avril 2018
+
+Lors du démarrage du projet Catalogue en 2019, les développements des bibliothèques open source de Neo9 sont en suspens. Le projet a consisté en une remise à jour tout en accompagnant les changements nécessaires.
+
+- Ajout de nouvelles bibliothèques et de skeleton pour démarrer plus rapidement les nouveaux projets
+- Maintien des librairies existantes, patch de sécurité, correction de bugs
+- Amélioration de la couverture de test
+- Gestion des contributions des collaborateurs
+
+## Taille d'équipe
+
+1-2 développeurs
+
+## Compétences
+
+- <Skill name="TypeScript" highlight={true} />
+- <Skill name="Node.js" highlight={true} />
+- <Skill name="Architecture Micro Services" />
+- <Skill name="Prometheus" />
+- <Skill name="GitHub Actions" />
+- <Skill name="GitHub" />
+- <Skill name="CodeCov" highlight={true} />
+- <Skill name="Ava.js" highlight={true} />
+- <Skill name="Express.js" highlight={true} />
+- <Skill name="NPM" />
+- <Skill name="Linux" />
+- <Skill name="REST" />
+- <Skill name="JavaScript" />
+- <Skill name="Yarn" />
+- <Skill name="MongoDB" />
+- <Skill name="JSON" />
+- <Skill name="Méthodes agiles" />
+
+## Contributions
+
+### **[node-routing](https://github.com/neo9/n9-node-routing)** : Base des micro-services chez Neo9
+
+Elle élimine tous les developpements annexes à la création d'un micro-service. Elle intègre :
+  - Routage HTTP basé sur les annotations ([routing-controllers](https://github.com/typestack/routing-controllers))
+  - Une validation ([class-validator](https://github.com/typestack/class-validator)) et une transformation des données entrantes ([class-tranformer](https://github.com/typestack/class-transformer))
+  - Le pattern d'IoC (Inversion of Control) grâce à [TypeDI](https://github.com/typestack/typedi)
+  - Un chargeur de configuration ([node-conf](https://github.com/neo9/n9-node-conf)) ainsi que sa validation au démarrage
+  - Un logger ([node-log](https://github.com/neo9/n9-node-log))
+  - L'exposition de métriques pour prometheus ([promster](https://github.com/tdeekens/promster))
+  - Un client HTTP basé sur [Got](https://github.com/sindresorhus/got)
+  - La génération et exposition de la documentation OpenAPI
+  - etc.
+
+
+### **[mongodb-client](https://github.com/neo9/n9-mongodb-client)** : Surcouche du client mongodb standard
+
+Ce client permet de standardiser l'usage des collections mongo, et propose beaucoup de simplifications par rapport au client standard.
+Quelques exemples :
+- il intègre automatiquement la gestion des dates de création/modification/dernière mise à jour, ainsi que l'utilisateur effectuant l'action
+- il peut aussi tracer toutes les modifications sur une collection dans une collection d'historisation avec une simple option `keepHistoric: true`
+
+### **[mongodb-client](https://github.com/neo9/n9-mongodb-migration)** : Outil de migration d'une base de donnée mongo d'une version applicative à une autre
+
+Joue des scripts rollup et prend en charge un lock ainsi que le rollback en cas d'erreur.
+
+### **[node-conf](https://github.com/neo9/n9-node-conf)** : Chargeur de configuration par environment
+
+Cette bibliothèque passée en TypeScript charge une configuration par environment, avec héritage d'une configuration globale et surcharge possible par fichier externe.
+
+### **[node-log](https://github.com/neo9/n9-node-log)** : Simple bibliothèque de log au format JSON hors dev
+
+### **[node-utils](https://github.com/neo9/n9-node-utils)** : Des fonctions utilitaires
+
+Permet d'avoir un type d'erreur `N9Error` standard qui peut embarque un context en plus du message et du statut de l'erreur,
+ainsi que d'autres informations aidant à l'analyse des erreurs.
+
+### [microservice-skeleton](https://github.com/neo9/n9-node-microservice-skeleton) & [gateway-skeleton](https://github.com/neo9/n9-node-gateway-skeleton)
+
+Exemples pour commencer des micro-services.
