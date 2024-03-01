@@ -118,3 +118,9 @@
 .vis-timeline .vis-item-content>* {
     vertical-align: middle;
 }
+
+/** ************* FOOTER ************* **/
+
+.footer__link-item {
+    line-height: 3; /* From Lighthouse https://developer.chrome.com/docs/lighthouse/seo/tap-targets/?utm_source=lighthouse&utm_medium=devtools */
+}
