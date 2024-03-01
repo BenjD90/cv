@@ -93,6 +93,10 @@ const config = {
 						href: 'https://www.linkedin.com/in/benjd90/',
 					},
 					{
+						label: 'CV en PDF',
+						href: 'pathname:///CV-Benjamin-DANIEL.pdf',
+					},
+					{
 						label: 'GitHub',
 						href: 'https://github.com/BenjD90',
 					},

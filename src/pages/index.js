@@ -22,6 +22,14 @@ function HomepageHeader() {
 					<Link className="button button--secondary button--lg" to="/docs/intro">
 						Lire le CV
 					</Link>
+					<a
+						className="button button--secondary button--lg"
+						target="\_blank"
+						download
+						href={require('/CV-Benjamin-DANIEL.pdf').default}
+					>
+						📄 Télécharger le CV en PDF
+					</a>
 				</div>
 			</div>
 		</header>
