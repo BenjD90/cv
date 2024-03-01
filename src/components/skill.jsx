@@ -62,6 +62,7 @@ const skillUrlsBySkill = {
 	'VHDL': 'https://fr.wikipedia.org/wiki/VHDL',
 	'Adobe Photoshop': 'https://www.adobe.com/products/photoshop.html',
 	'Angular': 'https://angular.io/',
+	'Puppeteer': 'https://pptr.dev/',
 };
 
 export default function Skill({ name, highlight }) {
