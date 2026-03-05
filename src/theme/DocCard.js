@@ -1,9 +1,9 @@
-/* src: https://github.com/facebook/docusaurus/blob/v3.1.1/packages/docusaurus-theme-classic/src/theme/DocCard/index.tsx */
+/* src: https://github.com/facebook/docusaurus/blob/v3.9.2/packages/docusaurus-theme-classic/src/theme/DocCard/index.tsx */
 
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import { findFirstSidebarItemLink, useDocById } from '@docusaurus/theme-common/internal';
+import { findFirstSidebarItemLink, useDocById } from '@docusaurus/plugin-content-docs/client';
 import { usePluralForm } from '@docusaurus/theme-common';
 import { translate } from '@docusaurus/Translate';
 
