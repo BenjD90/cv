@@ -6,13 +6,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-    --ifm-color-primary: #46566d;
-    --ifm-color-primary-dark: #3f4d62;
-    --ifm-color-primary-darker: #3c495d;
-    --ifm-color-primary-darkest: #313c4c;
-    --ifm-color-primary-light: #4d5f78;
-    --ifm-color-primary-lighter: #51637d;
-    --ifm-color-primary-lightest: #5b708e;
+	--ifm-color-primary: #46566d;
+	--ifm-color-primary-dark: #3f4d62;
+	--ifm-color-primary-darker: #3c495d;
+	--ifm-color-primary-darkest: #313c4c;
+	--ifm-color-primary-light: #4d5f78;
+	--ifm-color-primary-lighter: #51637d;
+	--ifm-color-primary-lightest: #5b708e;
 	--ifm-background-color: #ffffff;
 	--ifm-background-color-secondary: #cccccc;
 	--ifm-code-font-size: 95%;
@@ -21,13 +21,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-    --ifm-color-primary: #95c0f3;
-    --ifm-color-primary-dark: #72abef;
-    --ifm-color-primary-darker: #60a1ed;
-    --ifm-color-primary-darkest: #2b81e7;
-    --ifm-color-primary-light: #b8d5f7;
-    --ifm-color-primary-lighter: #cadff9;
-    --ifm-color-primary-lightest: #ffffff;
+	--ifm-color-primary: #95c0f3;
+	--ifm-color-primary-dark: #72abef;
+	--ifm-color-primary-darker: #60a1ed;
+	--ifm-color-primary-darkest: #2b81e7;
+	--ifm-color-primary-light: #b8d5f7;
+	--ifm-color-primary-lighter: #cadff9;
+	--ifm-color-primary-lightest: #ffffff;
 	--ifm-background-color: #000000;
 	--ifm-background-color-secondary: #333333;
 	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
@@ -87,40 +87,41 @@
 }
 
 /** ******** VIS TIMELINE ********* **/
-.vis-labelset .vis-label, .vis-time-axis .vis-text {
-    color: var(--ifm-color-content) !important;
+.vis-labelset .vis-label,
+.vis-time-axis .vis-text {
+	color: var(--ifm-color-content) !important;
 }
 
 .vis-timeline .vis-item {
-    cursor: pointer;
-    color: var(--ifm-color-content-inverse);
-    border-color: var(--ifm-color-primary);
-    background-color: var(--ifm-color-primary-lighter);
+	cursor: pointer;
+	color: var(--ifm-color-content-inverse);
+	border-color: var(--ifm-color-primary);
+	background-color: var(--ifm-color-primary-lighter);
 }
 
 .vis-timeline .vis-item.projects {
-    background-color: var(--ifm-color-primary-dark);
+	background-color: var(--ifm-color-primary-dark);
 }
 
 .vis-timeline .vis-item.techno {
-    background-color: var(--ifm-background-color-secondary);
+	background-color: var(--ifm-background-color-secondary);
 }
 
 .vis-timeline .vis-item:hover {
-    background-color: var(--ifm-background-color);
-    color: var(--ifm-color-primary)
+	background-color: var(--ifm-background-color);
+	color: var(--ifm-color-primary);
 }
 
 .vis-timeline .vis-item-content {
-    line-height: 27px;
+	line-height: 27px;
 }
 
-.vis-timeline .vis-item-content>* {
-    vertical-align: middle;
+.vis-timeline .vis-item-content > * {
+	vertical-align: middle;
 }
 
 /** ************* FOOTER ************* **/
 
 .footer__link-item {
-    line-height: 3; /* From Lighthouse https://developer.chrome.com/docs/lighthouse/seo/tap-targets/?utm_source=lighthouse&utm_medium=devtools */
+	line-height: 3; /* From Lighthouse https://developer.chrome.com/docs/lighthouse/seo/tap-targets/?utm_source=lighthouse&utm_medium=devtools */
 }
