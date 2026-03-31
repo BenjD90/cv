@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
-import Timeline from 'react-visjs-timeline';
+import VisTimeline from '../components/VisTimeline';
 import { useHistory } from 'react-router-dom';
 
 function HomepageHeader() {
@@ -289,7 +289,7 @@ export default function Home() {
 		<Layout title="Accueil" description={siteConfig.tagline}>
 			<HomepageHeader />
 			<div style={{ marginTop: '20px' }}>
-				<Timeline options={options} items={items} groups={groups} clickHandler={clickHandler} />
+				<VisTimeline options={options} items={items} groups={groups} clickHandler={clickHandler} />
 			</div>
 			<main></main>
 		</Layout>

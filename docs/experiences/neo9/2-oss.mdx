@@ -5,8 +5,8 @@ sidebar_custom_props:
   image: /cv/img/pages/experiences/neo9/github.png
   newTitle: Contribution Open Source
 ---
-import Skill from '@site/src/components/skill';
 
+import Skill from '@site/src/components/skill';
 
 # Lead Développeur des bibliothèques open sources Neo9
 
@@ -48,21 +48,22 @@ Lors du démarrage du projet Catalogue en 2019, les développements des biblioth
 ### **[node-routing](https://github.com/neo9/n9-node-routing)** : Base des micro-services chez Neo9
 
 Elle élimine tous les developpements annexes à la création d'un micro-service. Elle intègre :
-  - Routage HTTP basé sur les annotations ([routing-controllers](https://github.com/typestack/routing-controllers))
-  - Une validation ([class-validator](https://github.com/typestack/class-validator)) et une transformation des données entrantes ([class-tranformer](https://github.com/typestack/class-transformer))
-  - Le pattern d'IoC (Inversion of Control) grâce à [TypeDI](https://github.com/typestack/typedi)
-  - Un chargeur de configuration ([node-conf](https://github.com/neo9/n9-node-conf)) ainsi que sa validation au démarrage
-  - Un logger ([node-log](https://github.com/neo9/n9-node-log))
-  - L'exposition de métriques pour prometheus ([promster](https://github.com/tdeekens/promster))
-  - Un client HTTP basé sur [Got](https://github.com/sindresorhus/got)
-  - La génération et exposition de la documentation OpenAPI
-  - etc.
 
+- Routage HTTP basé sur les annotations ([routing-controllers](https://github.com/typestack/routing-controllers))
+- Une validation ([class-validator](https://github.com/typestack/class-validator)) et une transformation des données entrantes ([class-tranformer](https://github.com/typestack/class-transformer))
+- Le pattern d'IoC (Inversion of Control) grâce à [TypeDI](https://github.com/typestack/typedi)
+- Un chargeur de configuration ([node-conf](https://github.com/neo9/n9-node-conf)) ainsi que sa validation au démarrage
+- Un logger ([node-log](https://github.com/neo9/n9-node-log))
+- L'exposition de métriques pour prometheus ([promster](https://github.com/tdeekens/promster))
+- Un client HTTP basé sur [Got](https://github.com/sindresorhus/got)
+- La génération et exposition de la documentation OpenAPI
+- etc.
 
 ### **[mongodb-client](https://github.com/neo9/n9-mongodb-client)** : Surcouche du client mongodb standard
 
 Ce client permet de standardiser l'usage des collections mongo, et propose beaucoup de simplifications par rapport au client standard.
 Quelques exemples :
+
 - il intègre automatiquement la gestion des dates de création/modification/dernière mise à jour, ainsi que l'utilisateur effectuant l'action
 - il peut aussi tracer toutes les modifications sur une collection dans une collection d'historisation avec une simple option `keepHistoric: true`
 
