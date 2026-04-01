@@ -33,12 +33,21 @@ export default function VisTimeline({
 	const containerRef = useRef(null);
 	const timelineRef = useRef(null);
 	const customTimesRef = useRef({});
+	const isFirstMount = useRef(true);
 
 	// Initialise the timeline once on mount; teardown on unmount.
 	// Subsequent prop changes are handled by the update effect below.
 	useEffect(() => {
 		const initialItems = new DataSet(items);
-		const timeline = new Timeline(containerRef.current, initialItems, options);
+		let timeline;
+
+		if (groups && groups.length > 0) {
+			const initialGroups = new DataSet(groups);
+			timeline = new Timeline(containerRef.current, initialItems, initialGroups, options);
+		} else {
+			timeline = new Timeline(containerRef.current, initialItems, options);
+		}
+
 		timelineRef.current = timeline;
 
 		events.forEach((event) => {
@@ -46,21 +55,31 @@ export default function VisTimeline({
 			if (handler) timeline.on(event, handler);
 		});
 
-		// vis-timeline may compute zero-width dimensions when the container is
-		// not yet laid out.  A single requestAnimationFrame is not reliable
-		// because Docusaurus may still be computing layout at that point.
-		// Use a ResizeObserver to redraw once the container acquires its real
-		// width, then disconnect so we don't duplicate work that vis-timeline
-		// already handles internally for subsequent resizes.
-		const ro = new ResizeObserver((entries) => {
-			if (entries.length > 0 && entries[0].contentRect.width > 0) {
+		// ResizeObserver to ensure timeline resizes gracefully
+		// vis-timeline sometimes struggles to adapt directly to container dimension changes
+		const ro = new ResizeObserver(() => {
+			if (timeline) {
 				timeline.redraw();
-				ro.disconnect();
 			}
 		});
 		ro.observe(containerRef.current);
 
+		// Docusaurus and lazy-loaded assets can cause unexpected layout shifts
+		// shortly after mount. Force a few redraws to ensure vis-timeline isn't blank.
+		const intervalId = setInterval(() => {
+			if (timelineRef.current) {
+				timelineRef.current.redraw();
+			}
+		}, 150);
+
+		// Stop polling after ~1 second (when layout is definitely stable)
+		const timerId = setTimeout(() => {
+			clearInterval(intervalId);
+		}, 1000);
+
 		return () => {
+			clearInterval(intervalId);
+			clearTimeout(timerId);
 			ro.disconnect();
 			timeline.destroy();
 		};
@@ -68,6 +87,11 @@ export default function VisTimeline({
 	}, []);
 
 	useEffect(() => {
+		if (isFirstMount.current) {
+			isFirstMount.current = false;
+			return;
+		}
+
 		const timeline = timelineRef.current;
 		if (!timeline) return;
 
@@ -107,5 +131,5 @@ export default function VisTimeline({
 		customTimesRef.current = customTimes;
 	}, [items, groups, options, selection, customTimes, animate, currentTime]);
 
-	return <div ref={containerRef} />;
+	return <div ref={containerRef} style={{ width: '100%', minHeight: options.height || '400px' }} />;
 }
