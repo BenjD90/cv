@@ -46,7 +46,15 @@ export default function VisTimeline({
 			if (handler) timeline.on(event, handler);
 		});
 
-		return () => timeline.destroy();
+		// Force a redraw after the browser has finished laying out the DOM so
+		// that vis-timeline can calculate the correct container dimensions.
+		// Without this, the timeline stays invisible until the next resize event.
+		const rafId = requestAnimationFrame(() => timeline.redraw());
+
+		return () => {
+			cancelAnimationFrame(rafId);
+			timeline.destroy();
+		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
