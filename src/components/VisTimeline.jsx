@@ -46,13 +46,22 @@ export default function VisTimeline({
 			if (handler) timeline.on(event, handler);
 		});
 
-		// Force a redraw after the browser has finished laying out the DOM so
-		// that vis-timeline can calculate the correct container dimensions.
-		// Without this, the timeline stays invisible until the next resize event.
-		const rafId = requestAnimationFrame(() => timeline.redraw());
+		// vis-timeline may compute zero-width dimensions when the container is
+		// not yet laid out.  A single requestAnimationFrame is not reliable
+		// because Docusaurus may still be computing layout at that point.
+		// Use a ResizeObserver to redraw once the container acquires its real
+		// width, then disconnect so we don't duplicate work that vis-timeline
+		// already handles internally for subsequent resizes.
+		const ro = new ResizeObserver((entries) => {
+			if (entries.length > 0 && entries[0].contentRect.width > 0) {
+				timeline.redraw();
+				ro.disconnect();
+			}
+		});
+		ro.observe(containerRef.current);
 
 		return () => {
-			cancelAnimationFrame(rafId);
+			ro.disconnect();
 			timeline.destroy();
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
