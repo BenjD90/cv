@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -288,8 +289,17 @@ export default function Home() {
 	return (
 		<Layout title="Accueil" description={siteConfig.tagline}>
 			<HomepageHeader />
-			<div style={{ marginTop: '20px' }}>
-				<VisTimeline options={options} items={items} groups={groups} clickHandler={clickHandler} />
+			<div style={{ marginTop: '20px', minHeight: '610px' }}>
+				<BrowserOnly fallback={<div>Chargement de la timeline...</div>}>
+					{() => (
+						<VisTimeline
+							options={options}
+							items={items}
+							groups={groups}
+							clickHandler={clickHandler}
+						/>
+					)}
+				</BrowserOnly>
 			</div>
 			<main></main>
 		</Layout>
