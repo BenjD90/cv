@@ -6,6 +6,9 @@ sitemap.xml
 robots.txt
 .nojekyll
 
+# Binary documents
+*.pdf
+
 # Images
 *.jpg
 *.jpeg
