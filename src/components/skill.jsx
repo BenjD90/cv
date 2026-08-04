@@ -29,7 +29,7 @@ const skillUrlsBySkill = {
 	'JAVA 4': 'https://www.oracle.com/java/technologies/java-archive-javase-v14-downloads.html',
 	'JAVA 6':
 		'https://www.oracle.com/fr/java/technologies/javase-java-archive-javase6-downloads.html',
-	'JAVA 8': 'https://www.java.com/fr/download/help/java8_fr.html',
+	'JAVA 8': 'https://www.java.com/fr/download/help/java8.html',
 	'JAVA Quartz': 'https://www.quartz-scheduler.org/',
 	'Java': 'https://www.java.com/fr/',
 	'JavaScript': null,
