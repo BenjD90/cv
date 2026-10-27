@@ -1,0 +1,39 @@
+---
+sidebar_position: 3
+sidebar_label: Registre des mandats
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/bunji/opportunity.png
+---
+
+import Skill from '@site/src/components/skill';
+
+# Registre des mandats
+
+> octobre 2025 - aujourd'hui
+> \
+> Bordeaux · Télétravail, déplacements réguliers à Paris
+
+Permettre aux professionnels de l'immobilier de tenir dans Bunji leur registre des mandats (les contrats par lesquels un propriétaire leur confie la vente ou la location de son bien), avec la numérotation des mandats et le suivi de leurs statuts et de leurs échéances. La particularité chez Bunji : ce registre sert surtout au suivi du pipeline commercial des agents immobiliers, dont les cycles de vente sont longs (4 à 6 mois).
+
+## Création du microservice de gestion des mandats
+
+- Microservice créé de zéro, en binôme avec un autre développeur : socle NestJS, base PostgreSQL avec TypeORM
+- Modèle de données hybride, en partie normalisé et en partie dénormalisé (colonne JSONB)
+- API REST de gestion des mandats, chacun rattaché à un projet de vente ou de location récupéré depuis l'API principale de la plateforme
+- Numérotation des mandats dans le respect des règles juridiques strictes qui encadrent le registre des agences immobilières
+- Cycle de vie des mandats géré par une machine à états, avec validation des données à chaque nouvelle étape
+- Statistiques sur les mandats
+- Mode simulation (dry run) pour prévisualiser le résultat d'une opération sur un mandat sans l'enregistrer
+- Historisation des modifications de chaque mandat, pour en garantir la traçabilité
+
+## Compétences
+
+- <Skill name="TypeScript" highlight={true} />
+- <Skill name="Node.js" />
+- <Skill name="NestJS" highlight={true} />
+- <Skill name="Architecture Micro Services" />
+- <Skill name="TypeORM" />
+- <Skill name="PostgreSQL" highlight={true} />
+- <Skill name="Koyeb" />
+- <Skill name="Jest" />
+- <Skill name="REST" />

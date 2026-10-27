@@ -1,0 +1,55 @@
+---
+sidebar_position: 6
+sidebar_label: Monorepo & stack 2026
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/bunji/nx.png
+---
+
+import Skill from '@site/src/components/skill';
+
+# Migration vers un monorepo & modernisation de la stack
+
+> juin 2026 - aujourd'hui
+> \
+> Bordeaux · Télétravail, déplacements réguliers à Paris
+
+## Mise à jour de la stack (1er semestre 2026)
+
+- Passage de Node.js 22 à 26 sur l'ensemble des APIs et du front, avec adaptation des dépendances devenues incompatibles
+- TypeScript 6, ESLint 10, mise à jour majeure de Stripe, mises à jour de sécurité des dépendances
+- Montée en version de PostgreSQL 18
+
+## Monorepo GitLab (pnpm & Nx)
+
+Regrouper les APIs dans un seul dépôt, avec un pipeline CI/CD unifié.
+
+- Pipeline GitLab CI : installation, lint/tests, build d'images Docker optimisées pour la production, déploiement sur Koyeb via des scripts partagés
+- Mise en place de garde-fous pour imposer des bonnes pratiques Git communes (push rules GitLab : nom de branche et message de commit rattachés au ticket Linear)
+- Runbook documenté de migration d'une API, avec conservation de l'historique git (`git filter-repo`)
+- Migration progressive de l'ensemble des briques techniques de Bunji dans le monorepo
+
+## Outillage et automatisation
+
+- Mise à jour automatique des dépendances avec Renovate sur tous les dépôts (depuis janvier 2025)
+- Agent de code IA (Cyrus) branché sur Linear : worktree préparé automatiquement, merge requests en brouillon
+- Serveurs MCP GitLab et Grafana pour les agents, et exécution de la CI en local avec `gitlab-ci-local`
+
+## Compétences
+
+- <Skill name="TypeScript" highlight={true} />
+- <Skill name="Node.js" highlight={true} />
+- <Skill name="NestJS" />
+- <Skill name="TypeORM" />
+- <Skill name="Nx" highlight={true} />
+- <Skill name="pnpm" highlight={true} />
+- <Skill name="GitLab" />
+- <Skill name="GitLab CI/CD" highlight={true} />
+- <Skill name="Docker" />
+- <Skill name="Koyeb" />
+- <Skill name="DigitalOcean" />
+- <Skill name="PostgreSQL" />
+- <Skill name="Renovate" />
+- <Skill name="Jest" />
+- <Skill name="Stripe" />
+- <Skill name="Linear" />
+- <Skill name="opencode" />

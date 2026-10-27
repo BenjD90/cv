@@ -1,13 +1,15 @@
 {
   "label": "Neo9",
-  "position": 1,
+  "position": 2,
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "slug": "experiences/neo9"
+    "slug": "experiences/neo9",
+    "description": "ESN spécialisée dans le e-commerce, mettant en avant la qualité (\"built right\"), 3 bureaux à Paris, Lyon et Madrid, de 30 à 70 collaborateurs pendant mon passage, projets au forfait faits from scratch"
   },
   "customProps": {
     "image": "/cv/img/pages/experiences/neo9.svg",
-    "hideTitle": true
+    "hideTitle": true,
+    "dates": "mars 2016 - septembre 2024 · 8 ans 7 mois"
   }
 }

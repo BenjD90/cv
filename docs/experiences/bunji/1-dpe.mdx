@@ -1,0 +1,46 @@
+---
+sidebar_position: 1
+sidebar_label: Données DPE (ADEME)
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/bunji/logo-ademe.svg
+---
+
+import Skill from '@site/src/components/skill';
+
+# Données DPE de l'ADEME : collecte et import massif
+
+> mars 2025 - aujourd'hui
+> \
+> Bordeaux · Télétravail, déplacements réguliers à Paris
+
+Création du service qui alimente la base interne des diagnostics de performance énergétique (DPE) publiés par l'ADEME. La source de données a évolué avec le projet, et le pipeline avec elle :
+
+- **Collecte automatisée** avec des navigateurs headless (Browserless) et gestion des sessions, mise en place un temps pour rattraper le retard sur des concurrents qui utilisaient cette technique, puis abandonnée fin 2025
+- **API de l'ADEME** : gestion des limites de concurrence et de débit
+- **Chargement en flux de la base publique de l'ADEME**, un dump PostgreSQL de 70 Go compressé, avec nettoyage des adresses pour un meilleur taux de géocodage au numéro de rue près
+
+## Résultats
+
+- Import massif de la base ADEME en août 2026 : 18,5 millions de DPE mis à jour avec un traitement sur plusieurs jours
+- Base de plus de 30 millions de DPE, soit l'ensemble des DPE publiés par l'ADEME, alimentée par un flux continu d'environ 10 000 nouveaux DPE par jour ouvré
+- Adaptation au nouveau format de données de l'ADEME
+- Exploitation dans le produit : leads DPE, carte d'information (parcelles, DPE), courriers ciblés
+
+## Suivi
+
+- Tableaux de bord Looker Studio du volume de DPE par date d'établissement, par jour, par mois et par jour de la semaine, et de l'heure de fin de la collecte quotidienne
+- Dashboard Grafana dédié à la collecte automatisée, tant qu'elle était en place : volume ingéré, taux de réussite, état des sessions et cache navigateur
+
+## Compétences
+
+- <Skill name="TypeScript" highlight={true} />
+- <Skill name="Node.js" />
+- <Skill name="NestJS" />
+- <Skill name="TypeORM" />
+- <Skill name="PostgreSQL" highlight={true} />
+- <Skill name="Browserless" />
+- <Skill name="Prometheus" />
+- <Skill name="Grafana" />
+- <Skill name="Looker Studio" />
+- <Skill name="Koyeb" />
+- <Skill name="REST" />

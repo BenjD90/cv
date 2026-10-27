@@ -1,0 +1,43 @@
+---
+sidebar_position: 2
+sidebar_label: Courriers en masse
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/bunji/mail.png
+---
+
+import Skill from '@site/src/components/skill';
+
+# Courriers en masse
+
+> septembre 2024 - mars 2025 · 7 mois
+> \
+> Bordeaux · Télétravail, déplacements réguliers à Paris
+
+Premier projet chez Bunji : permettre l'envoi de courriers en masse à partir de leads (DPE, successions), avec la gestion des crédits des utilisateurs et l'intégration d'un service externe d'impression et d'envoi postal.
+
+## Création du microservice d'envoi de courriers
+
+- Microservice créé de zéro : socle NestJS, base PostgreSQL avec migrations TypeORM, logger, chargement de la configuration, gestion des erreurs HTTP
+- CRUD des courriers
+- Gestion des crédits des utilisateurs et monétisation via Stripe : achat de crédits d'envoi, gestion de transactions pour l'envoi de courriers, webhooks Stripe
+- Intégration d'un service externe d'impression et d'envoi postal, avec webhook pour suivre l'avancement de l'envoi des courriers
+- Génération des courriers en PDF avec la bibliothèque interne `pdf-courriers` (principal contributeur de la bibliothèque)
+- File de tâches asynchrones sur PostgreSQL avec Graphile Worker
+- Authentification mutuelle entre microservices
+- Métriques Prometheus, alerting Grafana sur les échecs d'envoi et supervision de la disponibilité
+- Déploiement sur Koyeb, mise en production en février-mars 2025
+- Corrections de production récurrentes sur l'envoi, puis migration dans le monorepo (2026)
+
+## Compétences
+
+- <Skill name="TypeScript" highlight={true} />
+- <Skill name="Node.js" />
+- <Skill name="NestJS" highlight={true} />
+- <Skill name="Architecture Micro Services" />
+- <Skill name="TypeORM" />
+- <Skill name="PostgreSQL" />
+- <Skill name="Graphile Worker" />
+- <Skill name="Stripe" />
+- <Skill name="Prometheus" />
+- <Skill name="Koyeb" />
+- <Skill name="Docker" />

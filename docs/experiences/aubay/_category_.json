@@ -1,12 +1,14 @@
 {
   "label": "Aubay - missions BNP Paribas",
-  "position": 2,
+  "position": 3,
   "link": {
     "type": "generated-index",
-    "slug": "experiences/aubay"
+    "slug": "experiences/aubay",
+    "description": "ESN française comptant plusieurs centaines de collaborateurs, missions chez BNP Paribas"
   },
   "customProps": {
     "image": "/cv/img/pages/experiences/aubay.svg",
-    "hideTitle": true
+    "hideTitle": true,
+    "dates": "janvier 2014 - mars 2016 · 2 ans 3 mois"
   }
 }

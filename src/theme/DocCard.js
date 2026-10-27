@@ -8,6 +8,7 @@ import { usePluralForm } from '@docusaurus/theme-common';
 import { translate } from '@docusaurus/Translate';
 
 import Heading from '@theme/Heading';
+import { useAddDuration } from '@site/src/components/duration';
 import styles from './styles.module.css';
 
 function useCategoryItemsPlural() {
@@ -35,7 +36,11 @@ function CardContainer({ href, children }) {
 	);
 }
 
-function CardLayout({ href, icon, title, description, image, dates }) {
+function CardLayout({ href, icon, title, description: rawDescription, image, dates: rawDates }) {
+	// "… - aujourd'hui" periods (doc excerpt or category dates) get their duration
+	const addDuration = useAddDuration();
+	const description = addDuration(rawDescription);
+	const dates = addDuration(rawDates);
 	return (
 		<CardContainer href={href}>
 			{image && (

@@ -1,86 +1,344 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 
-const skillUrlsBySkill = {
+export const skillUrlsBySkill = {
 	'.Net 4': 'https://dotnet.microsoft.com/en-us/download/dotnet-framework/net40',
 	'Adobe Photoshop': 'https://www.adobe.com/products/photoshop.html',
 	'Angular': 'https://angular.io/',
 	'AngularJS': 'https://angularjs.org/',
 	'Apache Kafka': 'https://kafka.apache.org/',
-	'Architecture Micro Services': null,
+	'Architecture Micro Services': 'https://microservices.io/',
 	'Ava.js': 'https://github.com/avajs/ava-docs/blob/main/fr_FR/readme.md',
+	'Browserless': 'https://www.browserless.io/',
+	'C': 'https://fr.wikipedia.org/wiki/C_(langage)',
+	'Bash': 'https://www.gnu.org/software/bash/',
 	'C#': 'https://learn.microsoft.com/fr-fr/dotnet/csharp/',
+	'Cyrus': 'https://atcyrus.com/',
 	'CodeCov': 'https://about.codecov.io/',
 	'Confluence': 'https://www.atlassian.com/software/confluence',
+	'Cronitor': 'https://cronitor.io/',
+	'DigitalOcean': 'https://www.digitalocean.com/',
 	'Docker': 'https://www.docker.com/',
+	'Docker & Docker Compose': 'https://www.docker.com/',
 	'Eclipse': 'https://eclipseide.org/',
+	'Visual Studio Code': 'https://code.visualstudio.com/',
+	'WebStorm': 'https://www.jetbrains.com/webstorm/',
 	'ElasticSearch': 'https://www.elastic.co/elasticsearch',
-	'ES6': 'http://es6-features.org/',
+	'ES6': 'https://hacks.mozilla.org/2015/04/es6-in-depth-an-introduction/',
 	'Express.js': 'https://expressjs.com/',
+	'Feathers.js': 'https://feathersjs.com/',
 	'Git': 'https://git-scm.com/',
 	'GitHub Actions': 'https://github.com/features/actions',
 	'GitHub': 'https://github.com/',
 	'GitLab': 'https://about.gitlab.com/',
+	'GitLab CI/CD': 'https://docs.gitlab.com/ci/',
 	'Gliffy': 'https://www.gliffy.com/',
 	'Google Kubernetes Engine (GKE)': 'https://cloud.google.com/kubernetes-engine?hl=fr',
 	'Google Sheet API': 'https://developers.google.com/sheets/api/guides/concepts',
 	'Grafana': 'https://grafana.com/grafana/',
+	'Grafana, Prometheus & Loki (observabilité)': 'https://grafana.com/',
+	'Grafana Alloy': 'https://grafana.com/docs/alloy/latest/',
+	'Grafana Loki': 'https://grafana.com/oss/loki/',
+	'Graphile Worker': 'https://worker.graphile.org/',
 	'Helm': 'https://helm.sh/fr/',
+	'HTML 5 & CSS 3 (Bootstrap 3 & 4)': 'https://developer.mozilla.org/fr/docs/Web/HTML',
+	'HTML5': 'https://developer.mozilla.org/fr/docs/Web/HTML',
+	'CSS3': 'https://developer.mozilla.org/fr/docs/Web/CSS',
+	'IntelliJ IDEA': 'https://www.jetbrains.com/idea/',
+	'IntelliJ IDEA, WebStorm & Visual Studio Code': 'https://www.jetbrains.com/',
 	'JAVA 4': 'https://www.oracle.com/java/technologies/java-archive-javase-v14-downloads.html',
 	'JAVA 6':
 		'https://www.oracle.com/fr/java/technologies/javase-java-archive-javase6-downloads.html',
 	'JAVA 8': 'https://www.java.com/fr/download/help/java8.html',
 	'JAVA Quartz': 'https://www.quartz-scheduler.org/',
+	'J2EE': 'https://jakarta.ee/',
 	'Java': 'https://www.java.com/fr/',
-	'JavaScript': null,
+	'Java EE': 'https://jakarta.ee/',
+	'Java & Java EE (SpringMVC, Spring JDBC)': 'https://spring.io/projects',
+	'JavaScript': 'https://web.dev/javascript',
+	'Jest': 'https://jestjs.io/',
 	'JIRA': 'https://www.atlassian.com/software/jira',
 	'jQuery': 'https://jquery.com/',
-	'JSON': null,
+	'JSON': 'https://www.json.org/',
 	'Kinect': 'https://fr.wikipedia.org/wiki/Kinect',
+	'Koyeb': 'https://www.koyeb.com/',
 	'Kubernetes': 'https://kubernetes.io/fr/',
-	'Linux': null,
+	'Linear': 'https://linear.app/',
+	'Linux': 'https://fr.wikipedia.org/wiki/Linux',
+	'Looker Studio': 'https://lookerstudio.google.com/',
+	'Loki': 'https://grafana.com/oss/loki/',
+	'Maven': 'https://maven.apache.org/',
 	'Microsoft 365': 'https://www.office.com/',
 	'Mirakl': 'https://www.mirakl.com/products/mirakl-marketplace-platform',
 	'MongoDB': 'https://www.mongodb.com/',
+	'MySQL': 'https://www.mysql.com/',
 	'MySQL Database': 'https://www.mysql.com/',
-	'Méthodes agiles': null,
+	'NestJS': 'https://nestjs.com/',
 	'Newman':
 		'https://github.com/postmanlabs/newman?tab=readme-ov-file#newman-the-cli-companion-for-postman--',
 	'Node.js': 'https://nodejs.org/en',
 	'NotePad++': 'https://notepad-plus-plus.org/',
+	'NPM, Yarn': 'https://www.npmjs.com/',
 	'NPM': 'https://www.npmjs.com/',
+	'Nx & pnpm (monorepo)': 'https://nx.dev/',
+	'Nx': 'https://nx.dev/',
+	'OpenCV': 'https://opencv.org/',
+	'opencode': 'https://opencode.ai/',
 	'PHP': 'https://www.php.net/',
 	'PlantUML': 'https://plantuml.com/',
 	'Playwright': 'https://playwright.dev/',
+	'pnpm': 'https://pnpm.io/',
+	'PostGIS': 'https://postgis.net/',
+	'PostgreSQL & PostGIS': 'https://www.postgresql.org/',
+	'PostgreSQL': 'https://www.postgresql.org/',
 	'Postman': 'https://www.postman.com/',
 	'Prometheus': 'https://prometheus.io/',
 	'Puppeteer': 'https://pptr.dev/',
+	'Python': 'https://www.python.org/',
 	'RabbitMQ': 'https://www.rabbitmq.com/',
-	'REST': null,
+	'Oracle Database': 'https://www.oracle.com/fr/database/',
+	'Renovate': 'https://docs.renovatebot.com/',
+	'REST': 'https://developer.mozilla.org/fr/docs/Glossary/REST',
+	'Sentry': 'https://sentry.io/',
+	'Sequelize': 'https://sequelize.org/',
 	'SpringData': 'https://spring.io/projects/spring-data',
 	'SpringMVC': 'https://docs.spring.io/spring-framework/reference/web/webmvc.html',
+	'Stripe': 'https://stripe.com/',
+	'SQL (MySQL, Oracle 11g&12c)': 'https://fr.wikipedia.org/wiki/Structured_Query_Language',
+	'Scala': 'https://www.scala-lang.org/',
+	'Spring': 'https://spring.io/',
 	'SVN': 'https://subversion.apache.org/',
+	'TypeORM': 'https://typeorm.io/',
 	'TypeScript': 'https://www.typescriptlang.org/',
 	'VHDL': 'https://fr.wikipedia.org/wiki/VHDL',
 	'Yarn': 'https://classic.yarnpkg.com/en/docs',
+	'Cloud computing': 'https://fr.wikipedia.org/wiki/Informatique_en_nuage',
+	'Méthodes agiles': 'https://fr.wikipedia.org/wiki/M%C3%A9thode_agile',
+	'PM2': 'https://pm2.keymetrics.io/',
+	'SQL': 'https://fr.wikipedia.org/wiki/Structured_Query_Language',
+	'Scrum': 'https://scrumguides.org/',
+	'UML': 'https://fr.wikipedia.org/wiki/UML',
+	'UML / MLD (Modèle Logique de Données)': 'https://fr.wikipedia.org/wiki/UML',
 };
 
-export default function Skill({ name, highlight }) {
-	if (skillUrlsBySkill[name]) {
-		if (highlight) {
-			return (
-				<b>
-					<Link to={skillUrlsBySkill[name]}>{name}</Link>
-				</b>
-			);
-		} else {
-			return <Link to={skillUrlsBySkill[name]}>{name}</Link>;
-		}
-	} else {
-		if (highlight) {
-			return <b>{name}</b>;
-		} else {
-			return name;
-		}
-	}
+// logo filename in /cv/img/skills/logos/small/, null when none available
+const skillImgsBySkill = {
+	'.Net 4': 'dotnet',
+	'Adobe Photoshop': 'photoshop',
+	'Google Kubernetes Engine (GKE)': 'kubernetes',
+	'Google Sheet API': 'google-sheets',
+	'Architecture Micro Services': 'microservices',
+	'Cloud computing': 'cloud-computing',
+	'Méthodes agiles': 'agile',
+	'Scrum': 'agile',
+	'REST': 'rest',
+	'Angular': 'angular',
+	'AngularJS': 'angularjs',
+	'Angular Material': 'angular',
+	'Apache Kafka': 'kafka',
+	'Ava.js': 'ava',
+	'Bash': 'bash',
+	'Browserless': 'browserless',
+	'C': 'c',
+	'C#': 'csharp',
+	'CodeCov': 'codecov',
+	'Cronitor': 'cronitor',
+	'CSS': 'css3',
+	'CSS3': 'css3',
+	'DigitalOcean': 'digitalocean',
+	'Docker': 'docker',
+	'Docker & Docker Compose': 'docker',
+	'ElasticSearch': 'elasticsearch',
+	'ES6': 'javascript',
+	'Feathers.js': 'feathersjs',
+	'Git': 'git',
+	'GitLab': 'gitlab',
+	'GitLab CI/CD': 'gitlab',
+	'Gliffy': 'gliffy',
+	'Grafana': 'grafana',
+	'Grafana Alloy': 'alloy',
+	'Grafana Loki': 'loki',
+	'Graphile Worker': 'graphile',
+	'HTML5': 'html5',
+	'HTML 5 & CSS 3 (Bootstrap 3 & 4)': 'html5',
+	'IntelliJ IDEA, WebStorm & Visual Studio Code': 'intellij',
+	'JAVA 4': 'java',
+	'JAVA 6': 'java',
+	'JAVA 8': 'java',
+	'JAVA Quartz': 'java',
+	'J2EE': 'java-ee',
+	'Java': 'java',
+	'Java & Java EE (SpringMVC, Spring JDBC)': 'java',
+	'JavaScript': 'javascript',
+	'JSON': 'json',
+	'Kinect': 'kinect',
+	'Koyeb': 'koyeb',
+	'Linear': 'linear',
+	'Linux': 'linux',
+	'Looker Studio': 'looker',
+	'Maven': 'maven',
+	'Microsoft 365': 'microsoft-365',
+	'Mirakl': 'mirakl',
+	'MongoDB': 'mongodb',
+	'MySQL Database': 'MySQL',
+	'NestJS': 'nestjs',
+	'Newman': 'newman',
+	'Node.js': 'nodejs',
+	'NotePad++': 'notepadpp',
+	'NPM': 'npm',
+	'NPM, Yarn': 'npm',
+	'Nx': 'nx',
+	'Nx & pnpm (monorepo)': 'nx',
+	'OpenCV': 'opencv',
+	'opencode': 'opencode',
+	'PM2': 'pm2',
+	'PHP': 'php',
+	'PlantUML': 'plantuml',
+	'Playwright': 'playwright',
+	'pnpm': 'pnpm',
+	'PostGIS': 'postgis',
+	'PostgreSQL': 'postgresql',
+	'PostgreSQL & PostGIS': 'postgresql',
+	'Prometheus': 'prometheus',
+	'Puppeteer': 'puppeteer',
+	'Python': 'python',
+	'Renovate': 'renovate',
+	'Sequelize': 'sequelize',
+	'SpringData': 'spring',
+	'SpringMVC': 'spring',
+	'Stripe': 'stripe',
+	'SQL (MySQL, Oracle 11g&12c)': 'sql',
+	'SQL': 'sql',
+	'SVN': 'svn',
+	'TypeORM': 'typeorm',
+	'UML': 'uml',
+	'UML / MLD (Modèle Logique de Données)': 'uml',
+	'TypeScript': 'ts',
+	'Visual Studio Code': 'vscode',
+	'WebStorm': 'webstorm',
+	'Yarn': 'yarn',
+	'Bootstrap 3': 'bootstrap',
+	'Confluence': 'confluence',
+	'Eclipse': 'eclipse',
+	'Express.js': 'express',
+	'GitHub': 'github',
+	'GitHub Actions': 'githubactions',
+	'Helm': 'helm',
+	'Jest': 'jest',
+	'JIRA': 'jira',
+	'jQuery': 'jquery',
+	'Kubernetes': 'kubernetes',
+	'Oracle Database': 'oracle-database',
+	'Postman': 'postman',
+	'RabbitMQ': 'rabbitmq',
+	'Scala': 'scala',
+	'Sentry': 'sentry',
+	'SpringMVC': 'spring',
+};
+
+// logos that already contain the skill name: render the image only, the alt carries the name
+const skillLogosWithName = new Set([
+	'angularjs',
+	'codecov',
+	'kinect',
+	'cronitor',
+	'gliffy',
+	'mirakl',
+	'sql',
+	'stripe',
+	'alloy',
+	'angular',
+	'bash',
+	'c',
+	'csharp',
+	'cyrus',
+	'digitalocean',
+	'docker',
+	'elasticsearch',
+	'git',
+	'gitlab',
+	'grafana',
+	'intellij',
+	'java',
+	'java-ee',
+	'koyeb',
+	'loki',
+	'maven',
+	'mongodb',
+	'MySQL',
+	'nestjs',
+	'nodejs',
+	'npm',
+	'nx',
+	'opencode',
+	'opencv',
+	'oracle-database',
+	'php',
+	'pnpm',
+	'postgis',
+	'postgresql',
+	'prometheus',
+	'python',
+	'spring',
+	'ts',
+	'vscode',
+	'webstorm',
+	'yarn',
+]);
+
+// exceptions: keep the text next to the logo even when it is a wordmark
+const skillsKeepingTextWithLogo = new Set([
+	'JAVA 4',
+	'JAVA 6',
+	'JAVA 8',
+	'JAVA Quartz',
+	'J2EE',
+	'Java',
+	'GitLab CI/CD',
+	'SpringMVC',
+	'SpringData',
+]);
+
+export default function Skill({ name, highlight, textOnly }) {
+	const url = skillUrlsBySkill[name] ?? undefined;
+	const img = textOnly ? undefined : skillImgsBySkill[name];
+
+	const label =
+		img !== undefined ? (
+			skillLogosWithName.has(img) && !skillsKeepingTextWithLogo.has(name) ? (
+				<img
+					loading="lazy"
+					src={`/cv/img/skills/logos/small/${img}.png`}
+					alt={name}
+					className="inline-skill-logo"
+				/>
+			) : (
+				<>
+					<img
+						loading="lazy"
+						src={`/cv/img/skills/logos/small/${img}.png`}
+						alt={name}
+						className="inline-skill-logo"
+					/>
+					{name}
+				</>
+			)
+		) : (
+			name
+		);
+
+	return (
+		<span
+			className={highlight ? 'inline-skill inline-skill--highlighted' : 'inline-skill'}
+			title={name}
+		>
+			{url ? (
+				<Link to={url}>{highlight ? <b>{label}</b> : label}</Link>
+			) : highlight ? (
+				<b>{label}</b>
+			) : (
+				label
+			)}
+		</span>
+	);
 }

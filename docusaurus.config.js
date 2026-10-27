@@ -30,6 +30,11 @@ const config = {
 		},
 	},
 
+	// used by src/components/duration.js to render the ongoing durations before hydration
+	customFields: {
+		buildDate: new Date().toISOString(),
+	},
+
 	// Even if you don't use internationalization, you can use this field to set
 	// useful metadata like html lang. For example, if your site is Chinese, you
 	// may want to replace "en" with "zh-Hans".
@@ -57,10 +62,14 @@ const config = {
 					priority: 0.5,
 					filename: 'sitemap.xml',
 				},
-				gtag: {
-					trackingID: 'GTM-TV5HCVD3',
-					anonymizeIP: false,
-				},
+				// gtag only in production builds: in dev the GTM script is often
+				// blocked and window.gtag is not a function on client navigation
+				...(process.env.NODE_ENV === 'production' && {
+					gtag: {
+						trackingID: 'GTM-TV5HCVD3',
+						anonymizeIP: false,
+					},
+				}),
 			}),
 		],
 	],

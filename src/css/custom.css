@@ -38,6 +38,52 @@
 	margin-bottom: 0;
 }
 
+@media (min-width: 997px) {
+	.generated-index-page {
+		max-width: 75% !important;
+	}
+}
+
+.generated-index-title {
+	--ifm-h1-font-size: 3rem;
+	margin-bottom: calc(1.25 * var(--ifm-leading));
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.breadcrumbsContainer {
+	--ifm-breadcrumb-size-multiplier: 0.8;
+	margin-bottom: 0.8rem;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link img {
+	display: block;
+}
+
+.doc-item-category-image {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.inline-skill {
+	display: inline-flex;
+	align-items: center;
+}
+
+.inline-skill-logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.inline-skill--highlighted {
+	background: var(--ifm-hover-overlay);
+	border-radius: 6px;
+	padding: 3px 10px;
+	margin: 0 1px;
+}
+
 .skills .progress-wrapper {
 	margin-left: 15px;
 }
@@ -69,6 +115,10 @@
 }
 
 .skills .progress-item .progress-title img:not(:first-child) {
+	margin-left: 5px;
+}
+
+.skills .progress-item .progress-title a + a img {
 	margin-left: 5px;
 }
 
