@@ -45,12 +45,11 @@ export default function Home() {
 
 	// https://visjs.github.io/vis-timeline/docs/timeline/#Configuration_Options
 	const options = {
-		height: '610px',
 		stack: true,
 		editable: false,
 		showCurrentTime: false,
 		zoomMin: oneDayInMs * 365 * 3,
-		zoomMax: oneDayInMs * 365 * (2023 - 2008 + 1),
+		zoomMax: oneDayInMs * 365 * (new Date().getFullYear() - 2008 + 1),
 		end: new Date(Date.now() + oneDayInMs * 30),
 		start: new Date('2008-09-01'),
 		margin: {
@@ -81,11 +80,19 @@ export default function Home() {
 		},
 		{
 			start: '2016-03-14',
-			end: new Date(),
+			end: '2024-09-09',
 			content: '<img src="/cv/img/pages/experiences/neo9.svg" alt="Neo9" height="27px" /> Neo9',
 			selectable: false,
 			group: 'entreprises',
 			link: '/cv/docs/experiences/neo9',
+		},
+		{
+			start: '2024-09-09',
+			end: new Date(),
+			content: '<img src="/cv/img/pages/experiences/bunji.svg" alt="Bunji" height="27px" /> Bunji',
+			selectable: false,
+			group: 'entreprises',
+			link: '/cv/docs/experiences/bunji',
 		},
 		{
 			start: '2014-01-01',
@@ -153,7 +160,7 @@ export default function Home() {
 		},
 		{
 			start: '2018-03-01',
-			end: new Date(),
+			end: '2024-09-09',
 			content: 'Contribution Open Source',
 			group: 'projects',
 			className: 'projects',
@@ -161,44 +168,62 @@ export default function Home() {
 		},
 		{
 			start: '2023-11-20',
-			end: new Date(),
+			end: '2024-09-09',
 			content: 'Peaksys',
 			group: 'projects',
 			className: 'projects',
 			link: '/cv/docs/experiences/neo9/peaksys',
 		},
 		{
+			start: '2024-09-09',
+			end: new Date(),
+			content: 'Bunji - Lead Dév. Back-end',
+			group: 'projects',
+			className: 'projects',
+			link: '/cv/docs/experiences/bunji',
+		},
+		{
 			start: '2017-02-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/ts.png" alt="ts" />',
+			content:
+				'<img src="/cv/img/skills/logos/small/ts.png" alt="TypeScript" title="TypeScript" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2016-01-01',
-			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/angular.png" alt="angular" />',
+			end: '2023-11-20',
+			content: '<img src="/cv/img/skills/logos/small/angular.png" alt="Angular" title="Angular" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-02-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/nodejs.png" alt="nodejs" />',
+			content: '<img src="/cv/img/skills/logos/small/nodejs.png" alt="Node.js" title="Node.js" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2016-03-14',
+			end: '2024-09-09',
+			content: '<img src="/cv/img/skills/logos/small/mongodb.png" alt="MongoDB" title="MongoDB" />',
+			className: 'techno',
+			group: 'technos',
+		},
+		{
+			start: '2024-09-09',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/mongodb.png" alt="mongodb" />',
+			content:
+				'<img src="/cv/img/skills/logos/small/postgresql.png" alt="PostgreSQL" title="PostgreSQL" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-10-01',
-			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/elasticsearch.png" alt="elasticsearch" />',
+			end: '2024-09-09',
+			content:
+				'<img src="/cv/img/skills/logos/small/elasticsearch.png" alt="ElasticSearch" title="ElasticSearch" />',
 			className: 'techno',
 			group: 'technos',
 		},
@@ -206,7 +231,7 @@ export default function Home() {
 			start: '2009-01-01',
 			end: '2017-02-01',
 			content: `
-					<img src="/cv/img/skills/logos/small/java.png" alt="java" />
+					<img src="/cv/img/skills/logos/small/java.png" alt="Java" title="Java" />
 			`,
 			className: 'techno',
 			group: 'technos',
@@ -215,7 +240,7 @@ export default function Home() {
 			start: '2013-01-01',
 			end: '2017-02-01',
 			content: `
-					<img src="/cv/img/skills/logos/small/java-ee.png" alt="ee" />
+					<img src="/cv/img/skills/logos/small/java-ee.png" alt="Java EE" title="Java EE" />
 			`,
 			className: 'techno',
 			group: 'technos',
@@ -224,7 +249,7 @@ export default function Home() {
 			start: '2014-09-01',
 			end: '2017-02-01',
 			content: `
-					<img src="/cv/img/skills/logos/small/spring.png" alt="spring" />
+					<img src="/cv/img/skills/logos/small/spring.png" alt="Spring" title="Spring" />
 			`,
 			className: 'techno',
 			group: 'technos',
@@ -232,28 +257,35 @@ export default function Home() {
 		{
 			start: '2016-03-14',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/git.png" alt="git" />',
+			content: '<img src="/cv/img/skills/logos/small/git.png" alt="Git" title="Git" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2018-03-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/docker.png" alt="docker" />',
+			content: '<img src="/cv/img/skills/logos/small/docker.png" alt="Docker" title="Docker" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-05-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/yarn.png" alt="yarn" />',
+			content: '<img src="/cv/img/skills/logos/small/yarn.png" alt="Yarn" title="Yarn" />',
+			className: 'techno',
+			group: 'technos',
+		},
+		{
+			start: '2026-07-01',
+			end: new Date(),
+			content: '<img src="/cv/img/skills/logos/small/pnpm.png" alt="pnpm" title="pnpm" />',
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2007-12-01',
 			end: new Date(),
-			content: `<img src="/cv/img/skills/logos/small/html5.png" alt="html5" /><img src="/cv/img/skills/logos/small/css3.png" alt="css3" />`,
+			content: `<img src="/cv/img/skills/logos/small/html5.png" alt="HTML5" title="HTML5" /><img src="/cv/img/skills/logos/small/css3.png" alt="CSS3" title="CSS3" />`,
 			className: 'techno',
 			group: 'technos',
 		},

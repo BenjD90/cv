@@ -1,0 +1,41 @@
+---
+sidebar_position: 5
+sidebar_label: Observabilité & production
+sidebar_custom_props:
+  image: /cv/img/pages/experiences/bunji/alloy.png
+---
+
+import Skill from '@site/src/components/skill';
+
+# Observabilité & exploitation de la production
+
+> octobre 2024 - aujourd'hui
+> \
+> Bordeaux · Télétravail, déplacements réguliers à Paris
+
+Mise en place de la supervision de l'ensemble des services sur Grafana Cloud, pour détecter et diagnostiquer rapidement les incidents.
+
+- Configuration de Grafana Alloy (staging et production, déployé sur Koyeb) pour collecter les métriques Prometheus et les logs vers Loki, puis intégration au monorepo
+- Cinq dashboards conçus sur mesure :
+  - **DPE** : suivi de la collecte des données
+  - **Frontend nginx** : suivi du trafic global de l'application, pour détecter toute lenteur du back-end ou défaillance
+  - **Logs backend** : suivi global des logs applicatifs, prêts pour l'analyse en cas d'incident
+  - **Node.js** : métriques d'exécution (event loop, mémoire, ramasse-miettes), une solution simple pour éviter l'usage d'un APM onéreux
+  - **Service de courriers** : monitoring des synchronisations d'envoi de courriers
+- Alerting Grafana pour détecter toute défaillance majeure sur la plateforme
+- Surveillance de la disponibilité depuis l'extérieur de Bunji avec Cronitor, pour détecter toute défaillance non détectable par le monitoring interne
+- Suivi des exceptions avec Sentry
+- Gestion des incidents de production, y compris les échanges avec le support de l'hébergeur Koyeb
+
+## Compétences
+
+- <Skill name="Grafana" highlight={true} />
+- <Skill name="Prometheus" highlight={true} />
+- <Skill name="Grafana Loki" highlight={true} />
+- <Skill name="Grafana Alloy" highlight={true} />
+- <Skill name="Sentry" />
+- <Skill name="Cronitor" />
+- <Skill name="Node.js" />
+- <Skill name="PostgreSQL" />
+- <Skill name="Koyeb" />
+- <Skill name="Docker" />

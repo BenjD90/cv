@@ -1,0 +1,15 @@
+{
+  "label": "Bunji",
+  "position": 1,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "slug": "experiences/bunji",
+    "description": "Lead Développeur Back-end Node.js/TypeScript · Bunji édite un SaaS de prospection et de gestion pour les professionnels de l'immobilier : leads DPE et successions, courriers, mandats, avis de valeur. J'y conçois et fais évoluer le back-end, des micro-services Node.js/TypeScript sur PostgreSQL/PostGIS, du développement jusqu'à l'exploitation en production."
+  },
+  "customProps": {
+    "image": "/cv/img/pages/experiences/bunji.svg",
+    "hideTitle": true,
+    "dates": "septembre 2024 - aujourd'hui"
+  }
+}

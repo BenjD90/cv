@@ -8,28 +8,6 @@ import SkillProgress from '@site/src/components/skills';
 
 <div className="skills">
 
-## Frontend
-
-    <SkillProgress skillGroups={[
-    	{
-    		skills: [{
-    			img: 'angular',
-    		}],
-    		completed: 70
-    	},
-    	{
-    		skills: [{
-    			img: 'html5',
-    			name: 'HTML5'
-    		}, {
-    			img: 'css3',
-    			name: 'CSS3'
-    		}],
-    		name: 'HTML 5 & CSS 3 (Bootstrap 3 & 4)',
-    		completed: 80
-    	},
-    ]} />
-
 ## Backend
 
     <SkillProgress skillGroups={[
@@ -49,10 +27,27 @@ import SkillProgress from '@site/src/components/skills';
     	},
     	{
     		skills: [{
+    			img: 'nestjs',
+    			name: 'NestJS'
+    		}],
+    		completed: 70
+    	},
+    	{
+    		skills: [{
     			img: 'mongodb',
     			name: 'MongoDB'
     		}],
     		completed: 85
+    	},
+    	{
+    		skills: [{
+    			img: 'postgresql',
+    			name: 'PostgreSQL'
+    		}, {
+    			img: 'postgis',
+    			name: 'PostGIS'
+    		}],
+    		completed: 80
     	},
     	{
     		skills: [{
@@ -64,28 +59,69 @@ import SkillProgress from '@site/src/components/skills';
     	{
     		skills: [{
     			img: 'java',
+    			name: 'Java'
     		}, {
     			img: 'java-ee',
-    			name: 'JEE'
+    			name: 'Java EE'
     		}, {
     			img: 'spring',
+    			name: 'Spring'
     		}],
-    		name: 'Java & Java EE (SpringMVC, Spring JDBC)',
     		completed: 30
     	},
     	{
     		skills: [{
     			img: 'MySQL',
+    			name: 'MySQL'
     		}, {
     			img: 'oracle-database',
     			name: 'Oracle Database'
     		}],
-    		name: 'SQL (MySQL, Oracle 11g&12c)',
     		completed: 70
     	},
     	{
-    		name:'C#, PHP, C, Python (notions), Assembleur MC68000, OpenCV, Maven',
+    		skills: [{
+    			img: 'csharp',
+    			name: 'C#'
+    		}, {
+    			img: 'php',
+    			name: 'PHP'
+    		}, {
+    			img: 'c',
+    			name: 'C'
+    		}, {
+    			img: 'python',
+    			name: 'Python'
+    		}, {
+    			img: 'opencv',
+    			name: 'OpenCV'
+    		}, {
+    			img: 'maven',
+    			name: 'Maven'
+    		}],
     		completed: 20
+    	},
+    ]} />
+
+## Frontend
+
+    <SkillProgress skillGroups={[
+    	{
+    		skills: [{
+    			img: 'angular',
+    			name: 'Angular'
+    		}],
+    		completed: 70
+    	},
+    	{
+    		skills: [{
+    			img: 'html5',
+    			name: 'HTML5'
+    		}, {
+    			img: 'css3',
+    			name: 'CSS3'
+    		}],
+    		completed: 80
     	},
     ]} />
 
@@ -95,20 +131,15 @@ import SkillProgress from '@site/src/components/skills';
     	{
     		skills: [{
     			img: 'git',
+    			name: 'Git'
     		}],
     		completed: 70
     	},
     	{
     		skills: [{
     			img: 'bash',
+    			name: 'Bash'
     		}],
-    		completed: 60
-    	},
-    	{
-    		skills: [{
-    			img: 'docker',
-    		}],
-    		name: 'Docker & Docker Compose',
     		completed: 60
     	},
     	{
@@ -117,19 +148,93 @@ import SkillProgress from '@site/src/components/skills';
     			name: 'NPM'
     		}, {
     			img: 'yarn',
+    			name: 'Yarn'
     		}],
-    		name: 'NPM, Yarn',
     		completed: 85
     	},
     	{
     		skills: [{
     			img: 'intellij',
+    			name: 'IntelliJ IDEA'
+    		}, {
+    			img: 'webstorm',
+    			name: 'WebStorm'
     		}, {
     			img: 'vscode',
     			name: 'Visual Studio Code'
     		}],
-    		name: 'IntelliJ IDEA',
     		completed: 70
+    	},
+    	{
+    		skills: [{
+    			img: 'opencode',
+    			name: 'opencode'
+    		}],
+    		completed: 85
+    	},
+    ]} />
+
+## Infra
+
+    <SkillProgress skillGroups={[
+    	{
+    		skills: [{
+    			img: 'cyrus',
+    			name: 'Cyrus'
+    		}],
+    		completed: 80
+    	},
+    	{
+    		skills: [{
+    			img: 'docker',
+    			name: 'Docker'
+    		}],
+    		completed: 60
+    	},
+    	{
+    		skills: [{
+    			img: 'gitlab',
+    			name: 'GitLab'
+    		}, {
+    			name: 'GitLab CI/CD'
+    		}],
+    		completed: 70
+    	},
+    	{
+    		skills: [{
+    			img: 'nx',
+    			name: 'Nx'
+    		}, {
+    			img: 'pnpm',
+    			name: 'pnpm'
+    		}],
+    		completed: 70
+    	},
+    	{
+    		skills: [{
+    			img: 'grafana',
+    			name: 'Grafana'
+    		}, {
+    			img: 'prometheus',
+    			name: 'Prometheus'
+    		}, {
+    			img: 'loki',
+    			name: 'Loki'
+    		}, {
+    			img: 'alloy',
+    			name: 'Grafana Alloy'
+    		}],
+    		completed: 80
+    	},
+    	{
+    		skills: [{
+    			img: 'koyeb',
+    			name: 'Koyeb'
+    		}, {
+    			img: 'digitalocean',
+    			name: 'DigitalOcean'
+    		}],
+    		completed: 60
     	},
     ]} />
 
