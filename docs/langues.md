@@ -8,7 +8,7 @@ sidebar_position: 5
 
 > Courant, 810 au TOEIC
 
-3 mois de stage projet à Singapour, et cinq années consécutives de séjours linguistiques en immersion aux Etats-Unis, au Canada et en Angleterre.
+3 mois de stage projet à Singapour, et cinq années consécutives de séjours linguistiques en immersion aux États-Unis, au Canada et en Angleterre.
 
 ## Espagnol 🇪🇸
 

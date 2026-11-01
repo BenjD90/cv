@@ -1,7 +1,10 @@
 /* src: https://github.com/facebook/docusaurus/blob/v3.9.2/packages/docusaurus-theme-classic/src/theme/DocCardList/index.tsx */
 import React from 'react';
 import clsx from 'clsx';
-import { useCurrentSidebarCategory, filterDocCardListItems } from '@docusaurus/theme-common';
+import {
+	useCurrentSidebarCategory,
+	filterDocCardListItems,
+} from '@docusaurus/plugin-content-docs/client';
 import DocCard from './DocCard';
 
 function DocCardListForCurrentSidebarCategory({ className }) {

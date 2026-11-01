@@ -6,6 +6,7 @@ import { useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
 import { useHomePageRoute } from '@docusaurus/theme-common/internal';
 import { translate } from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import HomeBreadcrumbItem from '@theme/DocBreadcrumbs/Items/Home';
 import DocBreadcrumbsStructuredData from '@theme/DocBreadcrumbs/StructuredData';
 
@@ -38,6 +39,7 @@ function BreadcrumbsItem({ children, active }) {
 export default function DocBreadcrumbs() {
 	const breadcrumbs = useSidebarBreadcrumbs();
 	const homePageRoute = useHomePageRoute();
+	const { withBaseUrl } = useBaseUrlUtils();
 	if (!breadcrumbs) {
 		return null;
 	}
@@ -66,7 +68,7 @@ export default function DocBreadcrumbs() {
 									{showOnlyImage ? (
 										<img
 											loading="lazy"
-											src={item.customProps.image}
+											src={withBaseUrl(item.customProps.image)}
 											alt={item.label}
 											height="27px"
 										/>

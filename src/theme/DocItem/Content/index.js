@@ -3,6 +3,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import { useDoc, useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 
@@ -38,10 +39,17 @@ function usePageImage() {
 export default function DocItemContent({ children }) {
 	const syntheticTitle = useSyntheticTitle();
 	const image = usePageImage();
+	const { withBaseUrl } = useBaseUrlUtils();
 	return (
 		<div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
 			{image && (
-				<img loading="lazy" src={image} alt="" height="60px" className="doc-item-category-image" />
+				<img
+					loading="lazy"
+					src={withBaseUrl(image)}
+					alt=""
+					height="60px"
+					className="doc-item-category-image"
+				/>
 			)}
 			{syntheticTitle && (
 				<header>

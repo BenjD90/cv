@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import { skillUrlsBySkill } from './skill';
 
 function capitalizeFirstLetter(string) {
@@ -7,12 +8,14 @@ function capitalizeFirstLetter(string) {
 }
 
 function SkillImage({ skill }) {
+	const { withBaseUrl } = useBaseUrlUtils();
+	const name = skill.name ?? capitalizeFirstLetter(skill.img);
 	return (
 		<img
 			loading="lazy"
-			src={'/cv/img/skills/logos/small/' + skill.img + '.png'}
-			alt={capitalizeFirstLetter(skill.img)}
-			title={skill.name ?? capitalizeFirstLetter(skill.img)}
+			src={withBaseUrl(`/img/skills/logos/small/${skill.img}.png`)}
+			alt={name}
+			title={name}
 		/>
 	);
 }
