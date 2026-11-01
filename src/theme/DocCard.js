@@ -3,6 +3,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import { findFirstSidebarItemLink, useDocById } from '@docusaurus/plugin-content-docs/client';
 import { usePluralForm } from '@docusaurus/theme-common';
 import { translate } from '@docusaurus/Translate';
@@ -18,8 +19,9 @@ function useCategoryItemsPlural() {
 			count,
 			translate(
 				{
-					message: '{count} parties',
-					id: 'theme.docs.DocCard.categoryDescription.plurals',
+					// site id: with the theme id, the default French translation (« éléments ») would win
+					message: '{count} partie|{count} parties',
+					id: 'cv.docCard.categoryDescription.plurals',
 					description:
 						'The default description for a category card in the generated index about how many items this category includes',
 				},
@@ -41,11 +43,12 @@ function CardLayout({ href, icon, title, description: rawDescription, image, dat
 	const addDuration = useAddDuration();
 	const description = addDuration(rawDescription);
 	const dates = addDuration(rawDates);
+	const { withBaseUrl } = useBaseUrlUtils();
 	return (
 		<CardContainer href={href}>
 			{image && (
 				<div>
-					<img loading="lazy" height={'60px'} src={image} alt={title} />
+					<img loading="lazy" height={'60px'} src={withBaseUrl(image)} alt={title} />
 				</div>
 			)}
 			{title && (

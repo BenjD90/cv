@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'CV - Benjamin DANIEL',
-	tagline: 'Ingénieur back-end',
+	tagline: 'Lead développeur back-end',
 	favicon: 'img/favicon.ico',
 
 	// Set the production url of your site here
@@ -62,12 +62,10 @@ const config = {
 					priority: 0.5,
 					filename: 'sitemap.xml',
 				},
-				// gtag only in production builds: in dev the GTM script is often
-				// blocked and window.gtag is not a function on client navigation
+				// Google Tag Manager only in production builds: in dev the GTM script is often blocked
 				...(process.env.NODE_ENV === 'production' && {
-					gtag: {
-						trackingID: 'GTM-TV5HCVD3',
-						anonymizeIP: false,
+					googleTagManager: {
+						containerId: 'GTM-TV5HCVD3',
 					},
 				}),
 			}),
@@ -81,7 +79,7 @@ const config = {
 			navbar: {
 				title: 'Benjamin DANIEL',
 				logo: {
-					alt: 'Me',
+					alt: 'Photo de profil',
 					src: 'img/portrait-flipped-32.webp',
 				},
 				items: [
@@ -102,7 +100,7 @@ const config = {
 			footer: {
 				links: [
 					{
-						label: 'Linkedin',
+						label: 'LinkedIn',
 						href: 'https://www.linkedin.com/in/benjd90/',
 					},
 					{
@@ -118,7 +116,7 @@ const config = {
 						href: 'mailto:benjamin.b.daniel+cv-online@gmail.com',
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} Benjamin DANIEL. Built with Docusaurus.`,
+				copyright: `Copyright © ${new Date().getFullYear()} Benjamin DANIEL. Construit avec Docusaurus.`,
 			},
 			prism: {
 				theme: prismThemes.github,

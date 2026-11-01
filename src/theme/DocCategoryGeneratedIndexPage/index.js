@@ -2,6 +2,7 @@
 import React from 'react';
 import { PageMetadata } from '@docusaurus/theme-common';
 import { useCurrentSidebarCategory } from '@docusaurus/plugin-content-docs/client';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import DocCardList from '@theme/DocCardList';
 import DocPaginator from '@theme/DocPaginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
@@ -13,6 +14,8 @@ import { useAddDuration } from '@site/src/components/duration';
 function DocCategoryGeneratedIndexPageContent({ categoryGeneratedIndex }) {
 	const category = useCurrentSidebarCategory();
 	const addDuration = useAddDuration();
+	const { withBaseUrl } = useBaseUrlUtils();
+	const image = category.customProps?.image;
 	const dates = addDuration(category.customProps?.dates);
 	return (
 		<div className="generated-index-page">
@@ -20,19 +23,25 @@ function DocCategoryGeneratedIndexPageContent({ categoryGeneratedIndex }) {
 			<DocBreadcrumbs />
 			<DocVersionBadge />
 			<header>
-				{category.customProps?.image ? (
-					<img
-						loading="lazy"
-						src={category.customProps.image}
-						alt={category.label}
-						height="100px"
-					/>
-				) : (
+				{image && category.customProps?.hideTitle ? (
+					// the logo already contains the name: it is the title of the page
 					<Heading as="h1" className="generated-index-title">
-						{categoryGeneratedIndex.title}
+						<img
+							loading="lazy"
+							src={withBaseUrl(image)}
+							alt={categoryGeneratedIndex.title}
+							height="100px"
+						/>
 					</Heading>
+				) : (
+					<>
+						{image && <img loading="lazy" src={withBaseUrl(image)} alt="" height="100px" />}
+						<Heading as="h1" className="generated-index-title">
+							{categoryGeneratedIndex.title}
+						</Heading>
+					</>
 				)}
-				{category.customProps?.image && dates && <Heading as="h2">{dates}</Heading>}
+				{dates && <Heading as="h2">{dates}</Heading>}
 				{categoryGeneratedIndex.description && <p>{categoryGeneratedIndex.description}</p>}
 			</header>
 			<article className="margin-top--lg">

@@ -1,20 +1,22 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl, { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 import VisTimeline from '../components/VisTimeline';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from '@docusaurus/router';
 
 function HomepageHeader() {
 	const { siteConfig } = useDocusaurusContext();
+	const portraitUrl = useBaseUrl('/img/portrait-400.webp');
 	return (
 		<header className={clsx('hero hero--primary', styles.heroBanner)}>
 			<div className="container">
-				<img src={'/cv/img/portrait-400.webp'} alt="Photo de profil" />
+				<img src={portraitUrl} alt="Photo de profil" />
 				<Heading as="h1" className="hero__title">
 					Benjamin DANIEL
 				</Heading>
@@ -25,7 +27,8 @@ function HomepageHeader() {
 					</Link>
 					<a
 						className="button button--secondary button--lg"
-						target="\_blank"
+						target="_blank"
+						rel="noopener noreferrer"
 						download
 						href={require('/CV-Benjamin-DANIEL.pdf').default}
 					>
@@ -40,6 +43,12 @@ function HomepageHeader() {
 export default function Home() {
 	const { siteConfig } = useDocusaurusContext();
 	const history = useHistory();
+	const { withBaseUrl } = useBaseUrlUtils();
+
+	// vis-timeline renders the item contents as raw HTML: the image paths need the baseUrl
+	const companyLogo = (src, alt) => `<img src="${withBaseUrl(src)}" alt="${alt}" height="27px" />`;
+	const technoLogo = (img, alt) =>
+		`<img src="${withBaseUrl(`/img/skills/logos/small/${img}.png`)}" alt="${alt}" title="${alt}" />`;
 
 	const oneDayInMs = 1000 * 3600 * 24;
 
@@ -63,60 +72,59 @@ export default function Home() {
 	const items = [
 		{
 			start: '2008-09-01',
-			end: '2014-01-01',
-			content:
-				'<img src="/cv/img/pages/formation/esiee.png" alt="esiee" height="27px" /> E.S.I.E.E. Paris',
+			end: '2013-12-31',
+			content: `${companyLogo('/img/pages/formation/small/esiee.png', 'ESIEE Paris')} ESIEE Paris`,
 			selectable: false,
 			group: 'entreprises',
-			link: '/cv/docs/formation/esiee',
+			link: '/docs/formation/esiee',
 		},
 		{
 			start: '2014-01-01',
 			end: '2016-03-13',
-			content: '<img src="/cv/img/pages/experiences/aubay.svg" alt="Aubay" height="27px" /> Aubay',
+			content: `${companyLogo('/img/pages/experiences/aubay.svg', 'Aubay')} Aubay`,
 			selectable: false,
 			group: 'entreprises',
-			link: '/cv/docs/experiences/aubay',
+			link: '/docs/experiences/aubay',
 		},
 		{
 			start: '2016-03-14',
 			end: '2024-09-09',
-			content: '<img src="/cv/img/pages/experiences/neo9.svg" alt="Neo9" height="27px" /> Neo9',
+			content: `${companyLogo('/img/pages/experiences/neo9.svg', 'Neo9')} Neo9`,
 			selectable: false,
 			group: 'entreprises',
-			link: '/cv/docs/experiences/neo9',
+			link: '/docs/experiences/neo9',
 		},
 		{
 			start: '2024-09-09',
 			end: new Date(),
-			content: '<img src="/cv/img/pages/experiences/bunji.svg" alt="Bunji" height="27px" /> Bunji',
+			content: `${companyLogo('/img/pages/experiences/bunji.svg', 'Bunji')} Bunji`,
 			selectable: false,
 			group: 'entreprises',
-			link: '/cv/docs/experiences/bunji',
+			link: '/docs/experiences/bunji',
 		},
 		{
 			start: '2014-01-01',
 			end: '2014-09-01',
-			content: 'BNP - Dév. Junior Java',
+			content: 'BNP - Dév. junior Java',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/aubay/ism',
+			link: '/docs/experiences/aubay/ism',
 		},
 		{
 			start: '2014-09-01',
 			end: '2015-01-01',
-			content: 'BNP - Dév. Junior JEE',
+			content: 'BNP - Dév. junior Java EE',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/aubay/swm',
+			link: '/docs/experiences/aubay/swm',
 		},
 		{
 			start: '2015-01-01',
 			end: '2016-03-14',
-			content: 'BNP - Lead Dév. JEE',
+			content: 'BNP - Lead dév. Java EE',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/aubay/ism-v2',
+			link: '/docs/experiences/aubay/ism-v2',
 		},
 		{
 			start: '2016-03-14',
@@ -124,7 +132,7 @@ export default function Home() {
 			content: 'SFR Réunion',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/neo9/srr',
+			link: '/docs/experiences/neo9/srr',
 		},
 		{
 			start: '2016-10-01',
@@ -132,7 +140,7 @@ export default function Home() {
 			content: 'April',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/neo9/april',
+			link: '/docs/experiences/neo9/april',
 		},
 		{
 			start: '2017-02-01',
@@ -140,7 +148,7 @@ export default function Home() {
 			content: 'Rempart Vie',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/neo9/rempart-vie',
+			link: '/docs/experiences/neo9/rempart-vie',
 		},
 		{
 			start: '2017-05-01',
@@ -148,7 +156,7 @@ export default function Home() {
 			content: 'Air Liquide',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/neo9/alehos',
+			link: '/docs/experiences/neo9/alehos',
 		},
 		{
 			start: '2018-03-01',
@@ -156,15 +164,15 @@ export default function Home() {
 			content: 'Projet Catalogue',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/neo9/catalogue',
+			link: '/docs/experiences/neo9/catalogue',
 		},
 		{
 			start: '2018-03-01',
 			end: '2024-09-09',
-			content: 'Contribution Open Source',
+			content: 'Contribution open source',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/neo9/oss',
+			link: '/docs/experiences/neo9/oss',
 		},
 		{
 			start: '2023-11-20',
@@ -172,120 +180,118 @@ export default function Home() {
 			content: 'Peaksys',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/neo9/peaksys',
+			link: '/docs/experiences/neo9/peaksys',
 		},
 		{
 			start: '2024-09-09',
 			end: new Date(),
-			content: 'Bunji - Lead Dév. Back-end',
+			content: 'Bunji - Lead dév. back-end',
 			group: 'projects',
 			className: 'projects',
-			link: '/cv/docs/experiences/bunji',
+			link: '/docs/experiences/bunji',
 		},
 		{
 			start: '2017-02-01',
 			end: new Date(),
-			content:
-				'<img src="/cv/img/skills/logos/small/ts.png" alt="TypeScript" title="TypeScript" />',
+			content: technoLogo('ts', 'TypeScript'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2016-01-01',
-			end: '2023-11-20',
-			content: '<img src="/cv/img/skills/logos/small/angular.png" alt="Angular" title="Angular" />',
+			end: '2017-02-01',
+			content: technoLogo('angularjs', 'AngularJS'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-02-01',
+			end: '2023-11-20',
+			content: technoLogo('angular', 'Angular'),
+			className: 'techno',
+			group: 'technos',
+		},
+		{
+			start: '2016-10-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/nodejs.png" alt="Node.js" title="Node.js" />',
+			content: technoLogo('nodejs', 'Node.js'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2016-03-14',
 			end: '2024-09-09',
-			content: '<img src="/cv/img/skills/logos/small/mongodb.png" alt="MongoDB" title="MongoDB" />',
+			content: technoLogo('mongodb', 'MongoDB'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2024-09-09',
 			end: new Date(),
-			content:
-				'<img src="/cv/img/skills/logos/small/postgresql.png" alt="PostgreSQL" title="PostgreSQL" />',
+			content: technoLogo('postgresql', 'PostgreSQL'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-10-01',
-			end: '2024-09-09',
-			content:
-				'<img src="/cv/img/skills/logos/small/elasticsearch.png" alt="ElasticSearch" title="ElasticSearch" />',
+			end: '2023-11-20',
+			content: technoLogo('elasticsearch', 'Elasticsearch'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2009-01-01',
 			end: '2017-02-01',
-			content: `
-					<img src="/cv/img/skills/logos/small/java.png" alt="Java" title="Java" />
-			`,
+			content: technoLogo('java', 'Java'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2013-01-01',
 			end: '2017-02-01',
-			content: `
-					<img src="/cv/img/skills/logos/small/java-ee.png" alt="Java EE" title="Java EE" />
-			`,
+			content: technoLogo('java-ee', 'Java EE'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2014-09-01',
 			end: '2017-02-01',
-			content: `
-					<img src="/cv/img/skills/logos/small/spring.png" alt="Spring" title="Spring" />
-			`,
+			content: technoLogo('spring', 'Spring'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
-			start: '2016-03-14',
+			start: '2014-01-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/git.png" alt="Git" title="Git" />',
+			content: technoLogo('git', 'Git'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2018-03-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/docker.png" alt="Docker" title="Docker" />',
+			content: technoLogo('docker', 'Docker'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2017-05-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/yarn.png" alt="Yarn" title="Yarn" />',
+			content: technoLogo('yarn', 'Yarn'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2026-07-01',
 			end: new Date(),
-			content: '<img src="/cv/img/skills/logos/small/pnpm.png" alt="pnpm" title="pnpm" />',
+			content: technoLogo('pnpm', 'pnpm'),
 			className: 'techno',
 			group: 'technos',
 		},
 		{
 			start: '2007-12-01',
 			end: new Date(),
-			content: `<img src="/cv/img/skills/logos/small/html5.png" alt="HTML5" title="HTML5" /><img src="/cv/img/skills/logos/small/css3.png" alt="CSS3" title="CSS3" />`,
+			content: technoLogo('html5', 'HTML5') + technoLogo('css3', 'CSS3'),
 			className: 'techno',
 			group: 'technos',
 		},
@@ -313,27 +319,28 @@ export default function Home() {
 	const clickHandler = (e) => {
 		if (e.item) {
 			const item = items.find((i) => i.id === e.item);
-			let link = item.group === 'technos' ? '/cv/docs/skills' : item.link;
-			history.push(link); // will change with future Docusaurus upgrade https://stackoverflow.com/questions/31079081/how-to-programmatically-navigate-using-react-router
+			const link = item.group === 'technos' ? '/docs/skills' : item.link;
+			history.push(withBaseUrl(link));
 		}
 	};
 
 	return (
 		<Layout title="Accueil" description={siteConfig.tagline}>
 			<HomepageHeader />
-			<div style={{ marginTop: '20px', minHeight: '610px' }}>
-				<BrowserOnly fallback={<div>Chargement de la timeline...</div>}>
-					{() => (
-						<VisTimeline
-							options={options}
-							items={items}
-							groups={groups}
-							clickHandler={clickHandler}
-						/>
-					)}
-				</BrowserOnly>
-			</div>
-			<main></main>
+			<main>
+				<div style={{ marginTop: '20px', minHeight: '610px' }}>
+					<BrowserOnly fallback={<div>Chargement de la timeline...</div>}>
+						{() => (
+							<VisTimeline
+								options={options}
+								items={items}
+								groups={groups}
+								clickHandler={clickHandler}
+							/>
+						)}
+					</BrowserOnly>
+				</div>
+			</main>
 		</Layout>
 	);
 }
