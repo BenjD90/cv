@@ -49,7 +49,7 @@ Lors du démarrage du projet Catalogue en 2018, les développements des biblioth
 
 Elle élimine tous les développements annexes à la création d'un microservice. Elle intègre :
 
-- Routage HTTP basé sur les annotations ([routing-controllers](https://github.com/typestack/routing-controllers))
+- Un routage HTTP basé sur les annotations ([routing-controllers](https://github.com/typestack/routing-controllers))
 - Une validation ([class-validator](https://github.com/typestack/class-validator)) et une transformation des données entrantes ([class-transformer](https://github.com/typestack/class-transformer))
 - Le pattern d'IoC (Inversion of Control) grâce à [TypeDI](https://github.com/typestack/typedi)
 - Un chargeur de configuration ([node-conf](https://github.com/neo9/n9-node-conf)) ainsi que sa validation au démarrage
@@ -69,7 +69,7 @@ Quelques exemples :
 
 ### **[mongodb-migration](https://github.com/neo9/n9-mongodb-migration)** : Outil de migration d'une base de données MongoDB d'une version applicative à une autre
 
-Exécute les scripts de migration, avec un verrou et un rollback en cas d'erreur.
+Cet outil exécute les scripts de migration, avec un verrou et un rollback en cas d'erreur.
 
 ### **[node-conf](https://github.com/neo9/n9-node-conf)** : Chargeur de configuration par environnement
 
@@ -79,9 +79,9 @@ Cette bibliothèque passée en TypeScript charge une configuration par environne
 
 ### **[node-utils](https://github.com/neo9/n9-node-utils)** : Des fonctions utilitaires
 
-Permet d'avoir un type d'erreur `N9Error` standard qui peut embarquer un contexte en plus du message et du statut de l'erreur,
+Cette bibliothèque fournit un type d'erreur `N9Error` standard qui peut embarquer un contexte en plus du message et du statut de l'erreur,
 ainsi que d'autres informations aidant à l'analyse des erreurs.
 
 ### [microservice-skeleton](https://github.com/neo9/n9-node-microservice-skeleton) & [gateway-skeleton](https://github.com/neo9/n9-node-gateway-skeleton)
 
-Exemples pour commencer des microservices.
+Ces exemples servent de point de départ pour créer de nouveaux microservices.

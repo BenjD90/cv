@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Qui suis-je ?
 
-Passionné de nouvelles technologies, constamment à la recherche des meilleurs outils pour réaliser efficacement des applications web.
+Passionné de nouvelles technologies, je suis constamment à la recherche des meilleurs outils pour réaliser efficacement des applications web.
 Ayant commencé avec le PHP au lycée, puis du Java dès ma formation en école d'ingénieur (ESIEE Paris), je me suis spécialisé sur une stack Node.js/TypeScript, d'abord en full stack avec Angular, puis sur le back-end avec MongoDB et PostgreSQL/PostGIS, afin d'allier performances et maintenabilité.
 J'ai depuis pris du recul sur la mise en place d'architecture, et les meilleurs technos/outils à mettre en place pour répondre au mieux aux besoins métiers, du e-commerce aux données immobilières et énergétiques.
 
